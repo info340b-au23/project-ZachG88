@@ -1,16 +1,177 @@
-html {
-    font-size: 16px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+* {
+    box-sizing:border-box;
 }
 
+html {
+    font-family: 'Young Serif', 'Poppins', sans-serif;
+}
+nav {
+    position: fixed;
+    width: 100%;
+    top:0;
+    right:0;
+    color: white;
+    background-color: #dbc1ac;
+    display: flex;
+    align-items: center; /* Align items vertically in the middle */
+    justify-content: space-between; /* Distribute items evenly */
+    padding: .5rem;
+    padding-bottom: 1rem;
+}
+
+
+nav a {
+    text-decoration: none;
+    color:black;
+}
+
+nav .menu-options {
+    list-style: none;
+    display: flex;
+    width: 50%;
+    justify-content: flex-end; 
+    padding-right: 2rem;
+}
+
+.menu-options ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu-options ul li {
+    margin: 0 1rem;
+}
+
+.menu-options ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu-options ul li a:hover {
+    color: #333;
+}
+
+.logo {
+    padding-left:2rem;
+}
+
+.container {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+}
+
+header {
+    margin-top: 6rem;
+    padding-bottom: 5rem;
+    color: white;
+    background-color: white;
+    background-image: url('../img/beans.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+main .welcome {
+    padding: 3%;
+    text-align: center;
+    font-size: 2em;
+}
+
+.quiz {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem 6rem;
+  }
+
+.quiz div {
+  background-color: #dbc1ac;
+  border: 2px solid black;
+  border-radius: 20px;
+  text-align: center;
+  padding: .25em;
+  flex-basis: 50%;
+  flex-grow: 1;
+} 
+
+
+header {
+    padding-top: 6rem;
+}
+
+.container {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+}
+
+.about-us {
+    padding: 10rem 4rem 4rem 4rem;
+}
+
+.about-us-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about-us-container div {
+    margin: 2rem;
+    padding: 0;
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+
+.our-team {
+    padding: 10rem 4rem 4rem 4rem;
+}
+
+.our-team-container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.our-team-container div {
+    margin: 2rem;
+    padding: 0;
+    flex-basis: 50%;
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+
+.more-coffee {
+    padding: 10rem 4rem 4rem 4rem;
+}
+
+.more-coffee-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.more-coffee-container div {
+    margin: 2rem;
+    padding: 0;
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+
+/* Below styling from proposal work*/
+
 h2 {
-    color: brown;
+    color: #634832;
 }
 
 img {
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    padding: 5px;
+    border-radius: 30px;
+    padding: 10px;
     width: 200px;
 }
 
