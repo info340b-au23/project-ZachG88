@@ -4,25 +4,35 @@
 
 html {
     font-family: 'Young Serif', 'Poppins', sans-serif;
+    background-color: #feecdb;
 }
+
+header {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 nav {
     position: fixed;
     width: 100%;
     top:0;
     right:0;
     color: white;
-    background-color: #dbc1ac;
+    background-color: #c9a27d;
     display: flex;
-    align-items: center; /* Align items vertically in the middle */
-    justify-content: space-between; /* Distribute items evenly */
+    align-items: center;
+    justify-content: space-between;
     padding: .5rem;
     padding-bottom: 1rem;
 }
 
-
-nav a {
-    text-decoration: none;
-    color:black;
+header #ribbon {
+   height: 14rem;
+   width: 100%;
+   background-image: url(../img/education_ribbon.jpeg);
 }
 
 nav .menu-options {
@@ -31,6 +41,12 @@ nav .menu-options {
     width: 50%;
     justify-content: flex-end; 
     padding-right: 2rem;
+    border-radius: 30px;
+    width: 200px;
+}
+
+nav img {
+    width: 200px;
 }
 
 .menu-options ul {
@@ -56,37 +72,35 @@ nav .menu-options {
 }
 
 .container {
-    max-width: 960px;
     margin-left: auto;
     margin-right: auto;
-    padding: 1rem;
+    padding-bottom: 4rem;
+    /* max-width: 960px;  */
 }
 
-header {
-    margin-top: 6rem;
-    padding-bottom: 5rem;
-    color: white;
-    background-color: white;
-    background-image: url('../img/beans.jpg');
-    background-size: cover;
-    background-position: center;
+.container img{
+    /* margin-left: auto; */
+    margin-right: auto;
+    padding: 0rem;
+    border-radius: 30px;
+    width: 200px;
 }
 
-main .welcome {
+#welcome {
     padding: 3%;
     text-align: center;
     font-size: 2em;
 }
 
-.quiz {
+#quiz {
     display: flex;
     flex-wrap: wrap;
     padding: 2rem 6rem;
   }
 
-.quiz div {
+#quiz div {
   background-color: #dbc1ac;
-  border: 2px solid black;
+  border: 2px solid #684320;
   border-radius: 20px;
   text-align: center;
   padding: .25em;
@@ -94,100 +108,173 @@ main .welcome {
   flex-grow: 1;
 } 
 
-
-header {
-    padding-top: 6rem;
+#quiz a {
+    text-decoration: none;
+    color: black;
 }
 
-.container {
-    max-width: 960px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1rem;
+#quiz a:hover {
+    color: #333;
 }
 
-.about-us {
-    padding: 10rem 4rem 4rem 4rem;
-}
-
-.about-us-container {
+#about-us.container {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.about-us-container div {
+#about-us img {
+    border-radius: 30px;
+    width: 200px;
+}
+
+#about-us.container div {
+    width: 40%;
     margin: 2rem;
     padding: 0;
     flex-grow: 1;
     flex-wrap: wrap;
 }
 
-.our-team {
-    padding: 10rem 4rem 4rem 4rem;
-}
 
-.our-team-container {
+
+#our-team.container {
+    /* align-items: ;  */
+    justify-content: space-between;
     display: flex;
     width: 100%;
     flex-wrap: wrap;
 }
 
-.our-team-container div {
+#our-team.container div {
+    width: 10%;
+    text-align: center;
     margin: 2rem;
     padding: 0;
-    flex-basis: 50%;
+    /* flex-basis: 50%; */
     flex-grow: 1;
     flex-wrap: wrap;
 }
 
-.more-coffee {
-    padding: 10rem 4rem 4rem 4rem;
+#our-team.container img{
+    border-radius: 100px;
+    border: 5px solid #684320;
+    width: 200px;
 }
 
-.more-coffee-container {
+#more-coffee.container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
+    flex-direction: row;
 }
 
-.more-coffee-container div {
+#more-coffee-container div {
     margin: 2rem;
     padding: 0;
     flex-grow: 1;
     flex-wrap: wrap;
 }
 
+#more-coffee img {
+    border-radius: 30px;
+    width: 200px;
+}
+
+footer {
+    color:white;
+    background-color: #c9a27d;
+    /* position:fixed; */
+    width: 100%
+}
+
+footer .container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 1rem;
+}
 
 
+footer p {
+    margin: 0 2rem;
+    border: none;
+    line-height: 1.5;
+    text-decoration: none;
+    color: black;
+    list-style: none;
+}
 
+footer a {
+    text-decoration: none;
+    color: black;
+}
+footer a:hover {
+    color: #333;
+}
+
+
+/* Added styling for coffee education */
+
+#about-coffee.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#about-coffee img {
+    border-radius: 30px;
+    width: 800px;
+}
+
+#about-coffee.container div {
+    width: 40%;
+    margin: 2rem;
+    padding: 0;
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+
+#about-coffee.container div h2{
+    text-align: left;
+}
+
+#roast.container {
+    /* align-items: ;  */
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+#roast.container div {
+    width: 10%;
+    text-align: center;
+    margin: 2rem;
+    padding: 0;
+    /* flex-basis: 50%; */
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+
+#roast.container img{
+    border-radius: 100px;
+    border: 5px solid #684320;
+    width: 200px;
+}
 
 
 /* Below styling from proposal work*/
 
 h2 {
-    color: #634832;
+    text-align: center;
+    font-size: 2rem;
 }
 
-img {
-    border-radius: 30px;
-    padding: 10px;
-    width: 200px;
-}
-
-div {
-    padding-right: 30px;
-    padding-bottom: 25px;
-    padding-left: 15px;
-  }
-
-.container {
-    display: flex; 
-}
-
-img {
-    max-width: 100%;
-}
 
 .names {
     flex-grow: 1;
