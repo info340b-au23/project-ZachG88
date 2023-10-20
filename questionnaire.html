@@ -3,81 +3,142 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Young+Serif&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="css/questionnaire.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <title>iCoffee Questionnaire</title>
+
 </head>
-<body>
-    <nav>
-        <h1 class="logo">iCoffee</h1>
-        <section class="menu-options">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#info">Info</a></li>
-                <li><a href="#coffee">Coffee</a></li>
-                <li><a href="#quiz">Quiz</a></li>
-            </ul>
-        </section>
-    </nav>
-
+<body class="questionnairebody">
     <header>
-        <div>
+        <div class="containment">
+            <nav>
+                <img class="logo" src="img/icoffee_logo.jpeg" alt="">
+                <h1 class="questionnaireheading">Questionnaire</h1>
+                <section class="menu-options">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#info">Info</a></li>
+                        <li><a href="#coffee">Coffee</a></li>
+                        <li><a href="#quiz">Quiz</a></li>
+                    </ul>
+                </section>
+            </nav>
+        </div>
+    </header> 
+
+    <main class="questionnaire">
+        <section id="questionnaireheading">
             <h1>Questionnaire</h1>
-        </div>
-    </header>
-
-    <main>
-        <div class="container">
-            <section>
+        </section>
+        <section class="questioncontainer">
+            <div>
                 <div class="text">
-                    <img src="img/coffeeclipart.png" alt="coffee"> Introduction
+                    <img src="img/coffeeclipart.png" alt="coffee">Introduction
+                </div>
+                <div class="intro">
+                    <p>Welcome to our Questionnaire where you'll answer some questions about your coffee preferences so that you can find your ideal cup!</p>
+                </div>
+            </div>
+
+            <div>
+                <div class="text">
+                    <img src="img/coffeeclipart.png" alt="coffee">Temperature Preference
                 </div>
                 <div class="options">
-                    <button>Option 1</button>
-                    <button>Option 2</button>
-                    <button>Option 3</button>
+                    <p>Would you like an iced or a hot drink?</p>
+                    <div class="btn-group m-2" role="group" aria-label="temperature preference">
+                        <input type="radio" class="btn-check" name="temperature" id="temp1" autocomplete="off">
+                        <label class="btn square-button" for="temp1"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Iced</span></label>
+                      
+                        <input type="radio" class="btn-check" name="temperature" id="temp2" autocomplete="off">
+                        <label class="btn square-button" for="temp2"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Hot</span></label>
+                    </div>
                 </div>
-            </section>
+            </div>
 
-            <section>
+            <div>
                 <div class="text">
-                    <img src="img/coffeeclipart.png" alt="coffee"> Milk Preference
+                    <img src="img/coffeeclipart.png" alt="coffee">Milk Preference
                 </div>
                 <div class="options">
-                    <button>Option 1</button>
-                    <button>Option 2</button>
-                    <button>Option 3</button>
+                    <p>What kind of milk do you prefer?</p>
+                    <div class="btn-group m-2" role="group" aria-label="milk preference">
+                        <input type="radio" class="btn-check" name="milk" id="milk1" autocomplete="off">
+                        <label class="btn square-button" for="milk1"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Option 1</span></label>
+                      
+                        <input type="radio" class="btn-check" name="milk" id="milk2" autocomplete="off">
+                        <label class="btn square-button" for="milk2"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Option 2</span></label>
+                      
+                        <input type="radio" class="btn-check" name="milk" id="milk3" autocomplete="off">
+                        <label class="btn square-button" for="milk3"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Option 3</span></label>
+                  
+                        <input type="radio" class="btn-check" name="milk" id="milk4" autocomplete="off">
+                        <label class="btn square-button" for="milk4"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Option 4</span></label>
+                    </div>
                 </div>
-            </section>
+            </div>
 
-            <section>
+            <div>
                 <div class="text">
-                    <img src="img/coffeeclipart.png" alt="coffee"> Flavor Preference
+                    <img src="img/coffeeclipart.png" alt="coffee">Flavor Preference
                 </div>
                 <div class="options">
-                    <button>Option 1</button>
-                    <button>Option 2</button>
-                    <button>Option 3</button>
+                    <p>What kind of flavor do you prefer?</p>
+                    <div class="btn-group m-2" role="group" aria-label="flavor preference">
+                        <input type="radio" class="btn-check" name="flavor" id="flavor1" autocomplete="off">
+                        <label class="btn square-button" for="flavor1"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Option 1</span></label>
+                      
+                        <input type="radio" class="btn-check" name="flavor" id="flavor2" autocomplete="off">
+                        <label class="btn square-button" for="flavor2"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Option 2</span></label>
+                      
+                        <input type="radio" class="btn-check" name="flavor" id="flavor3" autocomplete="off">
+                        <label class="btn square-button" for="flavor3"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Option 3</span></label>
+                  
+                        <input type="radio" class="btn-check" name="flavor" id="flavor4" autocomplete="off">
+                        <label class="btn square-button" for="flavor4"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Option 4</span></label>
+                    </div>
                 </div>
-            </section>
+            </div>
 
-            <section>
+            <div>
                 <div class="text">
-                    <img src="img/coffeeclipart.png" alt="coffee"> Caffeine Preference
+                    <img src="img/coffeeclipart.png" alt="coffee">Caffeine Preference
                 </div>
                 <div class="options">
-                    <button>Option 1</button>
-                    <button>Option 2</button>
-                    <button>Option 3</button>
+                    <p>How much Caffeine do you prefer?</p>
+                    <div class="btn-group m-2" role="group" aria-label="caffeine preference">
+                        <input type="radio" class="btn-check" name="caffeine" id="caffeine1" autocomplete="off">
+                        <label class="btn square-button" for="caffeine1"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Option 1</span></label>
+                      
+                        <input type="radio" class="btn-check" name="caffeine" id="caffeine2" autocomplete="off">
+                        <label class="btn square-button" for="caffeine2"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Option 2</span></label>
+                      
+                        <input type="radio" class="btn-check" name="caffeine" id="caffeine3" autocomplete="off">
+                        <label class="btn square-button" for="caffeine3"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Option 3</span></label>
+                  
+                        <input type="radio" class="btn-check" name="caffeine" id="caffeine4" autocomplete="off">
+                        <label class="btn square-button" for="caffeine4"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Option 4</span></label>
+                    </div>
                 </div>
-            </section>
-            <section>
+            </div>
+
+            <div>
                 <div>
-                    <button>See Your Results</button>
+                    <a href="#results" class="submit">See Your Results!</a>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
     </main>
+
+    <footer>
+        <div class="container">
+            <p><a href="mailto:zgen88@uw.edu"><span class="material-icons">email</span> email us!</a></p>
+            <p><a href="tel:253-285-0537"><span class="material-icons">phone</span> call us!</a></p>
+            <p>&copy; iCoffee 2023</p>
+        </div>
+    </footer>
 </body>
 </html>

@@ -4,15 +4,7 @@
 
 html {
     font-family: 'Young Serif', 'Poppins', sans-serif;
-    background-color: #feecdb;
-}
-
-header {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-color: #FFFCF9;
 }
 
 nav {
@@ -20,11 +12,9 @@ nav {
     width: 100%;
     top:0;
     right:0;
-    color: white;
     background-color: #c9a27d;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: .5rem;
     padding-bottom: 1rem;
 }
@@ -35,7 +25,28 @@ header #ribbon {
    background-image: url(../img/education_ribbon.jpeg);
 }
 
-nav .menu-options {
+.questionnaireheading {
+    text-align: center;
+    flex-grow: 1;
+    font-size: 1.75em;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 4rem;
+    /* max-width: 960px;  */
+}
+
+.container img{
+    /* margin-left: auto; */
+    margin-right: auto;
+    padding: 0;
+    border-radius: 30px;
+    width: 200px;
+}
+
+.menu-options ul {
     list-style: none;
     display: flex;
     width: 50%;
@@ -43,15 +54,6 @@ nav .menu-options {
     padding-right: 2rem;
     border-radius: 30px;
     width: 200px;
-}
-
-nav img {
-    width: 200px;
-}
-
-.menu-options ul {
-    list-style: none;
-    display: flex;
 }
 
 .menu-options ul li {
@@ -65,25 +67,6 @@ nav img {
 
 .menu-options ul li a:hover {
     color: #333;
-}
-
-.logo {
-    padding-left:2rem;
-}
-
-.container {
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 4rem;
-    /* max-width: 960px;  */
-}
-
-.container img{
-    /* margin-left: auto; */
-    margin-right: auto;
-    padding: 0rem;
-    border-radius: 30px;
-    width: 200px;
 }
 
 #welcome {
@@ -267,18 +250,129 @@ footer a:hover {
     width: 200px;
 }
 
+/* Below is styling for quesitonnaire pages*/
 
-/* Below styling from proposal work*/
+body.questionnairebody {
+    font-family: 'Young Serif', 'Poppins', sans-serif;
+    background-color: #FFFCF9;
+    color: #341102;
+  }
 
-h2 {
-    text-align: center;
-    font-size: 2rem;
+/* placeholder till container class gets changed */
+.containment {
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 4rem;
 }
 
+/* placeholder till container class gets changed */
+.containment img{
+    margin-right: auto;
+    padding: 0;
+    border-radius: 30px;
+    width: 200px;
+}
 
-.names {
-    flex-grow: 1;
-    padding: 20px; 
-    background-color: #f0f0f0; 
-    font-size: small;
+.questionnaire .questioncontainer {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex: 1;
+}
+
+#questionnaireheading {
+    display: none;
+    display: inline-block;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right:0;
+    background-color: #c9a27d;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.questionnaire img {
+    height: 2em;
+    margin-right: .5rem;
+}
+
+.questionnaire .text {
+    font-weight: bold;
+    font-style: italic;
+    margin-left: 0.5rem;
+}
+
+.questionnaire .intro {
+    margin: 0 0.5rem;
+    color: black;
+}
+
+.questionnaire .options {
+    font-style: italic;
+    font-size: 14px;
+    margin-top: 0.5rem;
+    margin-left: 0.25rem;
+}
+
+.questionnaire label img {
+    position: relative;
+    top: 5px;
+    left: 2.5px;
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px #00000029, 0 1px 3px #0000003b;
+  }
+  
+.questionnaire .button-text {
+    position: absolute;
+    bottom: 2.5px;
+    width: 100%;
+    left: 0%;
+}
+  
+.questionnaire .square-button {
+    float: left;
+    position: relative;
+    height: 140px;
+    background-color: #E8CAAF;
+}
+  
+.questionnaire .btn-group {
+    box-shadow: 0 1px 3px #00000029, 0 1px 3px #0000003b;
+    border: 1px  #00000000;
+    border-radius: 20px;
+    background-color: #C9A27D;
+}
+  
+.questionnaire div .btn {
+    border-radius: 20px;
+    border: 1px  #00000000;
+}
+
+.questionnaire a {
+    text-decoration: none;
+}
+  
+.submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: #E8CAAF;
+    color: #341102;
+    box-shadow: 0 1px 3px #00000029, 0 1px 3px #0000003b;
+    margin-top: 2rem;
+}
+  
+.submit:hover {
+    background-color: #C9A27D;
 }
