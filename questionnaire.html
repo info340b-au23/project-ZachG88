@@ -13,20 +13,47 @@
 </head>
 <body class="questionnairebody">
     <header>
-        <div class="containment">
-            <nav>
-                <img class="logo" src="img/icoffee_logo.jpeg" alt="">
-                <h1 class="questionnaireheading">Questionnaire</h1>
-                <section class="menu-options">
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#info">Info</a></li>
-                        <li><a href="#coffee">Coffee</a></li>
-                        <li><a href="#quiz">Quiz</a></li>
-                    </ul>
-                </section>
-            </nav>
-        </div>
+        <nav class="navbar navbar-expand-sm navbar-light nav-color">
+
+            <a class="navbar-brand" href="#">
+                <img
+                    src="img/icoffee_logo.jpeg"
+                    height="80"
+                    alt="iCoffee Logo"
+                    loading="lazy"
+                />
+            </a>
+
+            <button class="navbar-toggler" 
+                    type="button" 
+                    data-md-toggle="collapse"
+                    data-md-target="#navbarNav" 
+                    aria-controls="navbarNav"
+                    aria-expanded="false" 
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <h1 class="questionnaireheading d-none d-md-block">Questionnaire</h1>
+            
+            <div class="collapse navbar-collapse menu-options" id="navbarNav">
+                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#info">Info</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#coffee">Coffee</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#quiz">Quiz</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
     </header> 
 
     <main class="questionnaire">

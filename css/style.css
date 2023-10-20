@@ -4,9 +4,6 @@
 
 html {
     font-family: 'Young Serif', 'Poppins', sans-serif;
-<<<<<<< HEAD
-    background-color: #FFFCF9;
-=======
     background-color: #F5F5F5;
 }
 
@@ -16,7 +13,6 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
->>>>>>> fb24358124c4a4d152633dde60240e77a167ef22
 }
 
 nav {
@@ -65,9 +61,10 @@ header #ribbon {
 } */
 
 .questionnaireheading {
-    text-align: center;
+    text-align: right;
     flex-grow: 1;
     font-size: 1.75em;
+    color: #341102;
 }
 
 .container {
@@ -93,10 +90,10 @@ header #ribbon {
     padding-right: 2rem;
     border-radius: 30px;
     width: 200px;
+    text-align: center;
+    flex-grow: 1;
 }
 
-<<<<<<< HEAD
-=======
 nav img {
     width: 200px;
 }
@@ -106,7 +103,6 @@ nav img {
     display: flex;
 }
 
->>>>>>> fb24358124c4a4d152633dde60240e77a167ef22
 .menu-options ul li {
     margin: 0 1rem;
 }
@@ -120,12 +116,6 @@ nav img {
     color: #333;
 }
 
-<<<<<<< HEAD
-#welcome {
-    padding: 3%;
-    text-align: center;
-    font-size: 2em;
-=======
 .logo {
     padding-left:2rem;
 } */
@@ -149,7 +139,6 @@ nav img {
     border: 5px solid #684320;
     width: 200px;
     height: auto;
->>>>>>> fb24358124c4a4d152633dde60240e77a167ef22
 }
 
 
@@ -289,21 +278,6 @@ body.questionnairebody {
     color: #341102;
   }
 
-/* placeholder till container class gets changed */
-.containment {
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 4rem;
-}
-
-/* placeholder till container class gets changed */
-.containment img{
-    margin-right: auto;
-    padding: 0;
-    border-radius: 30px;
-    width: 200px;
-}
-
 .questionnaire .questioncontainer {
     margin-top: 50px;
     margin-bottom: 100px;
@@ -318,7 +292,6 @@ body.questionnairebody {
 
 #questionnaireheading {
     display: none;
-    display: inline-block;
     width: 100%;
     position: fixed;
     top: 0;
@@ -331,17 +304,18 @@ body.questionnairebody {
 .questionnaire img {
     height: 2em;
     margin-right: .5rem;
+    width: auto;
+}
+
+.questionnaire .intro {
+    margin: 0 0.5rem;
+    color: black;
 }
 
 .questionnaire .text {
     font-weight: bold;
     font-style: italic;
     margin-left: 0.5rem;
-}
-
-.questionnaire .intro {
-    margin: 0 0.5rem;
-    color: black;
 }
 
 .questionnaire .options {
