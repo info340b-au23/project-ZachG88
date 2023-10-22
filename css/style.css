@@ -271,27 +271,19 @@ footer a:hover {
 }
 
 /* Below is styling for quesitonnaire pages*/
+/* next task, create start menu with introduction for questionnaire page*/
 
 body.questionnairebody {
     font-family: 'Young Serif', 'Poppins', sans-serif;
+    height: 100%;
     background-color: #FFFCF9;
+    background-size: cover;
     color: #341102;
+    margin: 0;
+    padding: 0;
   }
 
-.questionnaire .questioncontainer {
-    margin-top: 50px;
-    margin-bottom: 100px;
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-    flex: 1;
-}
-
-#questionnaireheading {
-    display: none;
+/* #questionnaireheading {
     width: 100%;
     position: fixed;
     top: 0;
@@ -299,85 +291,121 @@ body.questionnairebody {
     background-color: #c9a27d;
     text-align: center;
     padding: 1.5rem;
+} */
+
+#questionnaireheading {
+    text-align: center;
+    margin: 0;
+    margin-top: 2em;
 }
 
-.questionnaire img {
-    height: 2em;
-    margin-right: .5rem;
+.questionnaire .headerlogo {
+    height: 2.5em;
     width: auto;
-}
-
-.questionnaire .intro {
-    margin: 0 0.5rem;
-    color: black;
+    margin-top: .5em;
 }
 
 .questionnaire .text {
     font-weight: bold;
     font-style: italic;
+    margin: 0;
     margin-left: 0.5rem;
 }
 
 .questionnaire .options {
     font-style: italic;
     font-size: 14px;
-    margin-top: 0.5rem;
-    margin-left: 0.25rem;
 }
 
-.questionnaire label img {
-    position: relative;
-    top: 5px;
-    left: 2.5px;
-    height: 100px;
-    width: 100px;
-    border-radius: 10px;
-    box-shadow: 0 1px 3px #00000029, 0 1px 3px #0000003b;
+.questionnaire .btn img {
+    display: none;
   }
   
 .questionnaire .button-text {
     position: absolute;
-    bottom: 2.5px;
+    bottom: 4px;
     width: 100%;
     left: 0%;
+}
+
+.questionnaire .brownsugar {
+    bottom: 6.5px;
+    font-size: 11px;
 }
   
 .questionnaire .square-button {
     float: left;
     position: relative;
-    height: 140px;
+    height: 30px;
+    width: 80px;
     background-color: #E8CAAF;
-}
-  
-.questionnaire .btn-group {
     box-shadow: 0 1px 3px #00000029, 0 1px 3px #0000003b;
-    border: 1px  #00000000;
-    border-radius: 20px;
-    background-color: #C9A27D;
-}
-  
-.questionnaire div .btn {
     border-radius: 20px;
     border: 1px  #00000000;
+    padding: .85rem;
+    margin: 0 .6rem;
+    margin-bottom: 2em;
 }
 
-.questionnaire a {
+.questionnaireredirect {
     text-decoration: none;
-}
-  
-.submit {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
-    height: 50px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 1em;
     border-radius: 20px;
     background-color: #E8CAAF;
     color: #341102;
     box-shadow: 0 1px 3px #00000029, 0 1px 3px #0000003b;
-    margin-top: 2rem;
+    margin: 1rem;
 }
   
-.submit:hover {
+.questionnaireredirect:hover {
     background-color: #C9A27D;
+}
+
+.questionnaire .img-results {
+    height: 4em;
+    position: relative;
+    left: 40px;
+    width: auto;
+}
+
+.questionnaire .result-buttons {
+    font-family: 'Young Serif', 'Poppins', sans-serif;
+    font-style: italic;
+    pointer-events: none;
+    background-color: #FEECDB;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 0 1px 3px #00000029, 0 1px 3px #0000003b;
+    border: 3px solid #684320;
+    margin: 10px;
+    width: 100px;
+}
+
+@media (min-width: 786px) {
+    .questionnaire .btn img {
+        display: block;
+        position: relative;
+        height: 100px;
+        width: 100px;
+        border-radius: 10px;
+        box-shadow: 0 1px 3px #00000029, 0 1px 3px #0000003b;
+      }
+
+    .questionnaire .square-button {
+        height: 150px;
+        width: 127.5px;
+    }
+
+    .questionnaire .button-text {
+        bottom: 6px;
+    }
+
+    .questionnaire .brownsugar {
+        font-size: 14px;
+    }
 }

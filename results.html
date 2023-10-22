@@ -3,70 +3,135 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Young+Serif&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="css/questionnaire.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <title>iCoffee Questionnaire Results</title>
 </head>
-<body>
-    <nav>
-        <h1 class="logo">iCoffee</h1>
-        <section class="menu-options">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#info">Info</a></li>
-                <li><a href="#coffee">Coffee</a></li>
-                <li><a href="#quiz">Quiz</a></li>
-            </ul>
-        </section>
-    </nav>
 
+<body class="questionnairebody">
     <header>
-        <div>
-            <h1>Questionnaire</h1>
-        </div>
+        <nav class="navbar navbar-expand-sm navbar-light nav-color">
+            <a class="navbar-brand" href="#">
+                <img
+                    src="img/icoffee_logo.jpeg"
+                    height="80"
+                    alt="iCoffee Logo"
+                    loading="lazy"
+                />
+            </a>
+            <button class="navbar-toggler" 
+                    type="button" 
+                    data-md-toggle="collapse"
+                    data-md-target="#navbarNav" 
+                    aria-controls="navbarNav"
+                    aria-expanded="false" 
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <h1 class="questionnaireheading d-none d-md-block mt-3">Questionnaire Results</h1>
+            <div class="collapse navbar-collapse menu-options" id="navbarNav">
+                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#info">Info</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#coffee">Coffee</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../project-ZachG88/questionnaire.html">Quiz</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
 
-    <main>
-        <div class="container">
-            <div class="text">
-                <img src="img/coffeeclipart.png" alt="coffee"> Here is your results:
+    <main class="questionnaire">
+        <section id="questionnaireheading">
+            <h1 class="d-md-none mb-3">Questionnaire Results</h1>
+        </section>
+        <section>
+            <div class="d-flex mt-lg-5 ms-4 mb-1">
+                <img class="headerlogo" src="img/HeaderLogo.png" alt="coffee">
+                <p class="text mt-4 ms-1">Here are your results:</p>
             </div>
-            <section class="results">
-                <div>
-                    <img class="img-results" src="img/coffeeresult.png" alt="coffee">
-                    <div>
-                        <button class="result-buttons">Flat White</button>
+            <div class="d-flex align-items-center justify-content-center flex-wrap flex-column">
+                <div class="d-flex mb-2">
+                    <div class="p-3">
+                        <img class="img-results" src="img/coffeeresult.png" alt="coffee">
+                        <div>
+                            <button class="result-buttons">Macchiato</button>
+                        </div>
+                    </div>
+                    <div class="mt-4 me-4">
+                        <ol>
+                            <li>1-2 tsp. of steamed milk</li>
+                            <li>1 shot of espresso</li>
+                        </ol>
                     </div>
                 </div>
-                <div>
-                    <img class="img-results" src="img/coffeeresult.png" alt="coffee">
-                    <div>
-                        <button class="result-buttons">Latte</button>
+
+                <div class="d-flex mb-2">
+                    <div class="p-3">
+                        <img class="img-results" src="img/coffeeresult.png" alt="coffee">
+                        <div>
+                            <button class="result-buttons">Latte</button>
+                        </div>
+                    </div>
+                    <div class="mt-4 me-4">
+                        <ol>
+                            <li>1 shot of espresso</li>
+                            <li>8-10 oz. of steamed milk</li>
+                            <li>1 cm of foam</li>
+                            <li>Into a 6-9 oz. coffee mug</li>
+                        </ol>
                     </div>
                 </div>
+            </div>
+        </section>
+        <section>
+            <div class="d-flex mt-5 ms-4 mb-1">
+                <img class="headerlogo" src="img/HeaderLogo.png" alt="coffee">
+                <p class="text mt-4 ms-1">Not Sure?</p>
+            </div>
+            <div class="d-flex align-items-center justify-content-center flex-wrap flex-column pb-5">
                 <div>
-                    <img class="img-results" src="img/coffeeresult.png" alt="coffee">
-                    <div>
-                        <button class="result-buttons">Macchiato</button>
+                    <a href="../project-ZachG88/education.html" class="questionnaireredirect">Difference Between Drinks ></a>
+                </div>
+
+                <div>
+                    <button class="btn questionnaireredirect" type="button" data-bs-toggle="collapse" data-bs-target="#blindbox" aria-expanded="false" aria-controls="coffeeblindbox">Get a Blind Box!</button>
+                    <div class="collapse" id="blindbox">
+                        <div class="card card-body">
+                            <div class="d-flex mb-2">
+                                <div class="p-3">
+                                    <img class="img-results" src="img/coffeeresult.png" alt="coffee">
+                                    <div>
+                                        <button class="result-buttons">Latte</button>
+                                    </div>
+                                </div>
+                                <div class="mt-4 me-4">
+                                    <ol>
+                                        <li>1 shot of espresso</li>
+                                        <li>8-10 oz. of steamed milk</li>
+                                        <li>1 cm of foam</li>
+                                        <li>Into a 6-9 oz. coffee mug</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div>
+                                <a href="#results" class="questionnaireredirect">Randomize!</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </section>
-
-            <section class="alternatives">
-                <div>
-                    <img src="img/coffeeclipart.png" alt="coffee"> Not Sure?
-                </div>
-
-                <div>
-                    <button>Difference Between Drinks ></button>
-                </div>
-
-                <div>
-                    <button>Get a blind box ></button>
-                </div>
-            </section>
-        </div>
+            </div>
+        </section>
     </main>
 </body>
 </html>

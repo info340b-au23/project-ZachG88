@@ -14,7 +14,6 @@
 <body class="questionnairebody">
     <header>
         <nav class="navbar navbar-expand-sm navbar-light nav-color">
-
             <a class="navbar-brand" href="#">
                 <img
                     src="img/icoffee_logo.jpeg"
@@ -23,7 +22,6 @@
                     loading="lazy"
                 />
             </a>
-
             <button class="navbar-toggler" 
                     type="button" 
                     data-md-toggle="collapse"
@@ -33,9 +31,7 @@
                     aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <h1 class="questionnaireheading d-none d-md-block">Questionnaire</h1>
-            
             <div class="collapse navbar-collapse menu-options" id="navbarNav">
                 <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                     <li class="nav-item">
@@ -48,37 +44,40 @@
                         <a class="nav-link" href="#coffee">Coffee</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#quiz">Quiz</a>
+                        <a class="nav-link" href="../project-ZachG88/questionnaire.html">Quiz</a>
                     </li>
                 </ul>
             </div>
         </nav>
-
     </header> 
 
     <main class="questionnaire">
         <section id="questionnaireheading">
-            <h1>Questionnaire</h1>
+            <h1 class="d-md-none mb-3">Questionnaire</h1>
         </section>
-        <section class="questioncontainer">
-            <div>
-                <div class="text">
-                    <img src="img/coffeeclipart.png" alt="coffee">Introduction
+        <section class="container-sm mt-lg-5">
+            <div class="mb-2">
+                <div class="d-flex mb-1">
+                    <img class="headerlogo" src="img/HeaderLogo.png" alt="coffee">
+                    <p class="text mt-4 ms-1">Introduction</p>
                 </div>
-                <div class="intro">
-                    <p>Welcome to our Questionnaire where you'll answer some questions about your coffee preferences so that you can find your ideal cup!</p>
+                <div class="text-black mx-1">
+                    <p>Welcome to iCoffee: Your Personal Coffee Companion! Choose your preference on temperature, milk, sweetness, and caffeine amount here, and we will generate the perfect drink just for you!
+                    </p>
                 </div>
             </div>
-
+        </section>
+        <section class="d-flex align-items-center justify-content-center flex-wrap flex-column m-5">
             <div>
-                <div class="text">
-                    <img src="img/coffeeclipart.png" alt="coffee">Temperature Preference
+                <div class="d-flex mb-1 ms-3">
+                    <img class="headerlogo" src="img/HeaderLogo.png" alt="coffee">
+                    <p class="text mt-4 ms-1">Tempurature Preference</p>
                 </div>
                 <div class="options">
-                    <p>Would you like an iced or a hot drink?</p>
-                    <div class="btn-group m-2" role="group" aria-label="temperature preference">
+                    <p class="ms-3">Would you like an iced or a hot drink?</p>
+                    <div class="btn-group-sm" role="group" aria-label="temperature preference">
                         <input type="radio" class="btn-check" name="temperature" id="temp1" autocomplete="off">
-                        <label class="btn square-button" for="temp1"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Iced</span></label>
+                        <label class="btn square-button" for="temp1"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Cold</span></label>
                       
                         <input type="radio" class="btn-check" name="temperature" id="temp2" autocomplete="off">
                         <label class="btn square-button" for="temp2"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Hot</span></label>
@@ -87,75 +86,85 @@
             </div>
 
             <div>
-                <div class="text">
-                    <img src="img/coffeeclipart.png" alt="coffee">Milk Preference
+                <div class="d-flex mb-1 ms-3">
+                    <img class="headerlogo" src="img/HeaderLogo.png" alt="coffee">
+                    <p class="text mt-4 ms-1">Milk Preference</p>
                 </div>
                 <div class="options">
-                    <p>What kind of milk do you prefer?</p>
-                    <div class="btn-group m-2" role="group" aria-label="milk preference">
+                    <p class="ms-3">What kind of milk do you prefer?</p>
+                    <div class="btn-group-sm" role="group" aria-label="milk preference">
                         <input type="radio" class="btn-check" name="milk" id="milk1" autocomplete="off">
-                        <label class="btn square-button" for="milk1"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Option 1</span></label>
+                        <label class="btn square-button" for="milk1"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Oat</span></label>
                       
                         <input type="radio" class="btn-check" name="milk" id="milk2" autocomplete="off">
-                        <label class="btn square-button" for="milk2"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Option 2</span></label>
+                        <label class="btn square-button" for="milk2"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">2%</span></label>
                       
                         <input type="radio" class="btn-check" name="milk" id="milk3" autocomplete="off">
-                        <label class="btn square-button" for="milk3"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Option 3</span></label>
+                        <label class="btn square-button" for="milk3"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Whole</span></label>
                   
                         <input type="radio" class="btn-check" name="milk" id="milk4" autocomplete="off">
-                        <label class="btn square-button" for="milk4"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Option 4</span></label>
+                        <label class="btn square-button" for="milk4"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Soy</span></label>
+
+                        <input type="radio" class="btn-check" name="milk" id="milk5" autocomplete="off">
+                        <label class="btn square-button" for="milk5"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Skim</span></label>
+                      
+                        <input type="radio" class="btn-check" name="milk" id="milk6" autocomplete="off">
+                        <label class="btn square-button" for="milk6"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Almond</span></label>
+                  
+                        <input type="radio" class="btn-check" name="milk" id="milk7" autocomplete="off">
+                        <label class="btn square-button" for="milk7"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Coconut</span></label>
                     </div>
                 </div>
             </div>
 
             <div>
-                <div class="text">
-                    <img src="img/coffeeclipart.png" alt="coffee">Flavor Preference
+                <div class="d-flex mb-1 ms-3">
+                    <img class="headerlogo" src="img/HeaderLogo.png" alt="coffee">
+                    <p class="text mt-4 ms-1">Flavor Preference</p>
                 </div>
                 <div class="options">
-                    <p>What kind of flavor do you prefer?</p>
-                    <div class="btn-group m-2" role="group" aria-label="flavor preference">
+                    <p class="ms-3">What kind of syrup do you prefer?</p>
+                    <div class="btn-group-sm" role="group" aria-label="flavor preference">
                         <input type="radio" class="btn-check" name="flavor" id="flavor1" autocomplete="off">
-                        <label class="btn square-button" for="flavor1"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Option 1</span></label>
+                        <label class="btn square-button" for="flavor1"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">None</span></label>
                       
                         <input type="radio" class="btn-check" name="flavor" id="flavor2" autocomplete="off">
-                        <label class="btn square-button" for="flavor2"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Option 2</span></label>
+                        <label class="btn square-button" for="flavor2"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Vanilla</span></label>
                       
                         <input type="radio" class="btn-check" name="flavor" id="flavor3" autocomplete="off">
-                        <label class="btn square-button" for="flavor3"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Option 3</span></label>
+                        <label class="btn square-button" for="flavor3"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Caramel</span></label>
                   
                         <input type="radio" class="btn-check" name="flavor" id="flavor4" autocomplete="off">
-                        <label class="btn square-button" for="flavor4"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Option 4</span></label>
+                        <label class="btn square-button" for="flavor4"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text brownsugar">Brown Sugar</span></label>
                     </div>
                 </div>
             </div>
 
             <div>
-                <div class="text">
-                    <img src="img/coffeeclipart.png" alt="coffee">Caffeine Preference
+                <div class="d-flex mb-1 ms-3">
+                    <img class="headerlogo" src="img/HeaderLogo.png" alt="coffee">
+                    <p class="text mt-4 ms-1">Caffeine Preference</p>
                 </div>
                 <div class="options">
-                    <p>How much Caffeine do you prefer?</p>
-                    <div class="btn-group m-2" role="group" aria-label="caffeine preference">
+                    <p class="ms-3">How much Caffeine do you prefer?</p>
+                    <div class="btn-group-sm" role="group" aria-label="caffeine preference">
                         <input type="radio" class="btn-check" name="caffeine" id="caffeine1" autocomplete="off">
-                        <label class="btn square-button" for="caffeine1"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Option 1</span></label>
+                        <label class="btn square-button" for="caffeine1"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">None</span></label>
                       
                         <input type="radio" class="btn-check" name="caffeine" id="caffeine2" autocomplete="off">
-                        <label class="btn square-button" for="caffeine2"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Option 2</span></label>
+                        <label class="btn square-button" for="caffeine2"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Weak</span></label>
                       
                         <input type="radio" class="btn-check" name="caffeine" id="caffeine3" autocomplete="off">
-                        <label class="btn square-button" for="caffeine3"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Option 3</span></label>
+                        <label class="btn square-button" for="caffeine3"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Medium</span></label>
                   
                         <input type="radio" class="btn-check" name="caffeine" id="caffeine4" autocomplete="off">
-                        <label class="btn square-button" for="caffeine4"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Option 4</span></label>
+                        <label class="btn square-button" for="caffeine4"><img src="../project-ZachG88/img/latte_art_1.jpeg"><span class="button-text">Strong</span></label>
                     </div>
                 </div>
             </div>
 
             <div>
-                <div>
-                    <a href="#results" class="submit">See Your Results!</a>
-                </div>
+                <a href="../project-ZachG88/results.html" class="questionnaireredirect">See Your Results!</a>
             </div>
         </section>
     </main>
