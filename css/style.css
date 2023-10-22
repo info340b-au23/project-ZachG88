@@ -283,16 +283,6 @@ body.questionnairebody {
     padding: 0;
   }
 
-/* #questionnaireheading {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    right:0;
-    background-color: #c9a27d;
-    text-align: center;
-    padding: 1.5rem;
-} */
-
 #questionnaireheading {
     text-align: center;
     margin: 0;
@@ -304,6 +294,13 @@ body.questionnairebody {
     width: auto;
     margin-top: .5em;
 }
+
+/* .questionnaire .menu {
+    position: fixed;
+    bottom: 0;
+    height: 3.72em;
+    width: auto;
+} */
 
 .questionnaire .text {
     font-weight: bold;
