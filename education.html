@@ -4,98 +4,131 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <title>iCoffee Education</title>
-
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Young+Serif&display=swap" rel="stylesheet">
-
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+        <title>iCoffee Education</title>
     </head>
 
     <body>
         <header>
-            <div class="container" id="navigation">
-                <nav>
-                    <img class="logo" src="img/icoffee_logo.jpeg" alt="">
-                    <section class="menu-options">
-                        <ul>
-                            <!-- <li><a href="#"><span class="material-icons" aria-label="Home">local_cafe</span></a></li> -->
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#info">Info</a></li>
-                            <li><a href="#coffee">Coffee</a></li>
-                            <li><a href="#quiz">Quiz</a></li>
-                        </ul>
-                    </section>
-                </nav>
-            </div>
+            <nav class="navbar navbar-expand-sm navbar-light nav-color">
 
-            <div id="ribbon">
-    
-            </div>
-        </header> 
+                <a class="navbar-brand" href="#">
+                    <img
+                        src="img/icoffee_logo.jpeg"
+                        height="80"
+                        alt="iCoffee Logo"
+                        loading="lazy"
+                    />
+                </a>
+
+                <button class="navbar-toggler" 
+                        type="button" 
+                        data-md-toggle="collapse"
+                        data-md-target="#navbarNav" 
+                        aria-controls="navbarNav"
+                        aria-expanded="false" 
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <h1 class="questionnaireheading d-none d-md-block">Education</h1>
+                <div class="collapse navbar-collapse menu-options" id="navbarNav">
+                    <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#info">Info</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#coffee">Coffee</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#quiz">Quiz</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
         
         <main>
-            <section class="container" id="welcome">
-                <h1>iCoffee Education</h1>
-            </section>
+            <div class="custom-bg">
+                <section class="d-flex justify-content-center">
+                    <div class="row">
+                        <div class="col-sm-12 p-5">
+                            <h1>iCoffee Education</h1>
+                        </div>
+                        <div class="row">
 
-            <section class="container" id="about-coffee">
-                <div>
-                    <h2>About Coffee...</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-                <div>
-                    <img src="img/education_ribbon.jpeg" alt="">
-                </div>
-            </section>
+                </section>
 
-            <!-- <section class="container" id="about-us">
-                <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-                <div>
-                    <img src="img/latte_art_1.jpeg" alt="">
-                </div>
-            </section> -->
+                <img src="img/education_ribbon.jpeg" 
+                    class="img-fluid shadow-lg" 
+                    alt="Responsive image"
+                    >
 
-            <h2>Roast</h2>
+                    <section class="container d-flex justify-content-center">
+                        <div class="row">
+                            <div class="col-sm-12 pb-4">
+                                <p class="h1 custom-bg text-left p-3">About Coffee..</p>
+                            </div>
 
-            <section class="container" id="roast">
-                <div>
-                    <p><img src="img/education_ribbon.jpeg" alt=""></p>
-                    <h3> Light</h3>
-                    <p> Heres some content about light roasts</p>
+                            <div class="col-sm-9">
+                                <div>
+                                    <p>Welcome to our Coffee Education Page where you can learn about the different types of coffee roasts and even how to make your own drinks! </p>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <div class="d-flex justify-content-center">
+                                    <img class="abt-img" src="img/education_beans.png" alt="Beans">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+
+                <h2>Roast</h2>
+
+                <section class="container" id="roast">
+                    <div>
+                        <p><img src="img/education_ribbon.jpeg" alt=""></p>
+                        <h3> Light</h3>
+                        <p> Heres some content about light roasts</p>
+                        
+                    </div>
+                    <div>
+                        <p><img src="img/education_ribbon.jpeg" alt=""></p>
+                        <h3>Medium</h3>
+                        <p> Heres some content about meadium roasts</p>
+                        
+                    </div>
+                    <div>
+                        <p><img src="img/education_ribbon.jpeg" alt=""></p>
+                        <h3>Dark</h3>
+                        <p> Heres some content about dark roasts</p>
+                        
+                    </div>
+                </section>
+
+                <h2>More About Coffee</h2>
+
+                <section class="container" id="more-coffee">
+
+                    <div><p><img src="img/latte_art_1.jpeg" alt=""></p></div>
+
+                    <div>
+                        <p> Text</p>
+                    </div>
+            
+                    <div><p><img src="img/latte_art_1.jpeg" alt=""></p></div>
                     
-                </div>
-                <div>
-                    <p><img src="img/education_ribbon.jpeg" alt=""></p>
-                    <h3>Medium</h3>
-                    <p> Heres some content about meadium roasts</p>
-                    
-                </div>
-                <div>
-                    <p><img src="img/education_ribbon.jpeg" alt=""></p>
-                    <h3>Dark</h3>
-                    <p> Heres some content about dark roasts</p>
-                    
-                </div>
-            </section>
-
-            <h2>More About Coffee</h2>
-
-            <section class="container" id="more-coffee">
-
-                <div><p><img src="img/latte_art_1.jpeg" alt=""></p></div>
-
-                <div>
-                    <p> Text</p>
-                </div>
-        
-                <div><p><img src="img/latte_art_1.jpeg" alt=""></p></div>
-                
-            </section>
+                </section>
+            </div>
         </main>
 
         <footer>

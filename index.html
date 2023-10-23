@@ -4,111 +4,173 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <title>iCoffee Main</title>
-
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Young+Serif&display=swap" rel="stylesheet">
-
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+        <title>iCoffee Main</title>
     </head>
 
-    <body>
-        <header>
-            <div class="container" id="navigation">
-                <nav>
-                    <img class="logo" src="img/icoffee_logo.jpeg" alt="">
-                    <section class="menu-options">
-                        <ul>
-                            <!-- <li><a href="#"><span class="material-icons" aria-label="Home">local_cafe</span></a></li> -->
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#info">Info</a></li>
-                            <li><a href="#coffee">Coffee</a></li>
-                            <li><a href="#quiz">Quiz</a></li>
+    <body> 
+        <div class="nav-color">
+            <header>
+                <nav class="navbar navbar-expand-sm navbar-light nav-color">
+
+                    <a class="navbar-brand" href="#">
+                        <img
+                            src="img/icoffee_logo.jpeg"
+                            height="80"
+                            alt="iCoffee Logo"
+                            loading="lazy"
+                        />
+                    </a>
+
+                    <button class="navbar-toggler" 
+                            type="button" 
+                            data-md-toggle="collapse"
+                            data-md-target="#navbarNav" 
+                            aria-controls="navbarNav"
+                            aria-expanded="false" 
+                            aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+
+                    <div class="collapse navbar-collapse menu-options" id="navbarNav">
+                        <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#info">Info</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#coffee">Coffee</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#quiz">Quiz</a>
+                            </li>
                         </ul>
-                    </section>
+                    </div>
                 </nav>
-            </div>
+            </header>
 
-            <div id="ribbon">
-                
-            </div>
-        </header> 
-        
-        <main>
-            <section class="container" id="welcome">
-                <h1>Find the Right Cup of Coffee For You!</h1>
-            </section>
+            <main>
+                <div class="custom-bg">
+                    <img src="img/education_ribbon.jpeg" 
+                    class="img-fluid shadow-lg" 
+                    alt="Responsive image"
+                    >
 
-            <section class="container" id="quiz">
-                <div>
-                    <h1><a href="#quiz">Try our Personilzed Quiz!</a></h1>
+                    <section class="container d-flex justify-content-center mb-5rem">
+                        <div class="card card-bg custom-border" style="width: 20rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Find the Right Cup of Coffee For You!</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn nav-color">Take the quiz!</a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="container d-flex justify-content-center">
+                        <div class="row">
+                            <div class="col-sm-12 pb-4">
+                                <p class="h1 custom-bg text-center p-3">About us</p>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="d-flex justify-content-center">
+                                    <img class="abt-img" src="img/latte_art_1.jpeg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <section class="container d-flex justify-content-center">
+                        <div class="row">
+                            <div class="col-sm-12 pb-4">
+                                <p class="h1 custom-bg text-center p-3">Our Team</p>
+                            </div>
+
+                            <div class="col-sm-6 col-md-3">
+                                <div>
+                                    <p><img class="teams-img img-fluid" src="img/zach.jpeg" alt="Zach"></p>
+                                    <h3> Zach Gendreau</h3>
+                                    <p> Heres some content about zach</p>
+                                </div>
+                            </div>
+                            
+                            <div class="col-sm-6 col-md-3">
+                                <div>
+                                    <p><img class="teams-img img-fluid" src="img/placeholder.jpeg" alt="Emily"></p>
+                                    <h3> Emily Blakeman</h3>
+                                    <p> Heres some content about emily</p>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-md-3"><div>
+                                <p><img class="teams-img img-fluid" src="img/placeholder.jpeg" alt="Shufan"></p>
+                                <h3> Shufan Wang</h3>
+                                <p> Heres some content about shufan</p> 
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-md-3">
+                                <div>
+                                    <p><img class="teams-img img-fluid" src="img/nathan.png" alt="Nathan"></p>
+                                    <h3> Nathan Nguyen</h3>
+                                    <p> Heres some content about nathan</p> 
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="container d-flex justify-content-center">
+                        <div class="row">
+                            <div class="col-sm-12 pb-4">
+                                <p class="h1 custom-bg text-center p-3">More About Coffee</p>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <div class="d-flex justify-content-center">
+                                    <img class="abt-img" src="img/latte_art_1.jpeg" alt="">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</P>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <div class="d-flex justify-content-center">
+                                    <img class="abt-img" src="img/latte_art_1.jpeg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
                 </div>
-            </section>
+            </main>
 
-            <h2>About Us</h2>
-
-            <section class="container" id="about-us">
-                <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <footer>
+                <div class="container d-none d-sm-flex">
+                    <p><a href="mailto:zgen88@uw.edu"><span class="material-icons">email</span> email us!</a></p>
+                    <p><a href="tel:253-285-0537"><span class="material-icons">phone</span> call us!</a></p>
+                    <p>&copy; iCoffee 2023</p>
                 </div>
-                <div>
-                    <img src="img/latte_art_1.jpeg" alt="">
-                </div>
-            </section>
-
-            <h2>Meet Our Team!</h2>
-
-            <section class="container" id="our-team">
-                <div>
-                    <p><img src="img/zach.jpeg" alt="zach"></p>
-                    <h3> Zach Gendreau</h3>
-                    <p> Heres some content about zach</p>
-                    
-                </div>
-                <div>
-                    <p><img src="img/placeholder.jpeg" alt=""></p>
-                    <h3> Emily Blakeman</h3>
-                    <p> Heres some content about emily</p>
-                    
-                </div>
-                <div>
-                    <p><img src="img/placeholder.jpeg" alt=""></p>
-                    <h3> Shufan Wang</h3>
-                    <p> Heres some content about shufan</p>
-                    
-                </div>
-                <div>
-                    <p><img src="img/nathan.png" alt="nathan"></p>
-                    <h3> Nathan Nguyen</h3>
-                    <p> Heres some content about nathan</p>
-                    
-                </div>
-            </section>
-
-            <h2>More About Coffee</h2>
-
-            <section class="container" id="more-coffee">
-                
-                <div><p><img src="img/latte_art_1.jpeg" alt=""></p></div>
-
-                <div>
-                    <p> Text</p>
-                </div>
-        
-                <div><p><img src="img/latte_art_1.jpeg" alt=""></p></div>
-            </section>
-        </main>
-
-        <footer>
-            <div class="container">
-                <p><a href="mailto:zgen88@uw.edu"><span class="material-icons">email</span> email us!</a></p>
-                <p><a href="tel:253-285-0537"><span class="material-icons">phone</span> call us!</a></p>
-                <p>&copy; iCoffee 2023</p>
-            </div>
-        </footer>
+            </footer>
+        </div>
     </body>
 
 </html>

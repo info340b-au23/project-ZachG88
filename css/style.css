@@ -2,11 +2,6 @@
     box-sizing:border-box;
 }
 
-html {
-    font-family: 'Young Serif', 'Poppins', sans-serif;
-    background-color: #F5F5F5;
-}
-
 header {
     color: white;
     display: flex;
@@ -35,6 +30,14 @@ nav {
     background-color: #F5F5F5;
 }
 
+.ribbon {
+    background-image: url('img/education_ribbon.jpeg'); /* Replace with your image path */
+    padding-top: 10rem;
+    background-size: cover; /* This will cover the entire background */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed;
+}
 
 main img {
     width: 100%;
@@ -273,7 +276,7 @@ footer a:hover {
 /* Below is styling for quesitonnaire pages*/
 /* next task, create start menu with introduction for questionnaire page*/
 
-body.questionnairebody {
+body {
     font-family: 'Young Serif', 'Poppins', sans-serif;
     height: 100%;
     background-color: #FFFCF9;
@@ -282,6 +285,16 @@ body.questionnairebody {
     margin: 0;
     padding: 0;
   }
+
+  /* body.homebody {
+    font-family: 'Young Serif', 'Poppins', sans-serif;
+    height: 100%;
+    background-color: #FFFCF9;
+    background-size: cover;
+    color: #341102;
+    margin: 0;
+    padding: 0;
+  } */
 
 #questionnaireheading {
     text-align: center;
