@@ -331,16 +331,11 @@ body {
     left: 0%;
 }
 
-.questionnaire .brownsugar {
-    bottom: 6.5px;
-    font-size: 11px;
-}
-
 .questionnaire .square-button {
     float: left;
     position: relative;
     height: 30px;
-    width: 150px;
+    width: 120px;
     background-color: #E8CAAF;
     box-shadow: 0 1px 3px #00000029, 0 1px 3px #0000003b;
     border-radius: 20px;
@@ -372,7 +367,7 @@ body {
 .questionnaire .img-results {
     height: 4em;
     position: relative;
-    left: 40px;
+    left: 25px;
     width: auto;
 }
 
@@ -406,9 +401,5 @@ body {
 
     .questionnaire .button-text {
         bottom: 6px;
-    }
-
-    .questionnaire .brownsugar {
-        font-size: 14px;
     }
 }
