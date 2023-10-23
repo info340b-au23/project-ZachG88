@@ -48,20 +48,11 @@ main img {
     margin-left: auto;
     margin-right: auto;
     padding: 6rem 3rem;
-    /* max-width: 960px;  */
 }
 
 .card-bg {
     background-color: #FEECDB;
 }
-
-
-/* 
-header #ribbon {
-   height: 14rem;
-   width: 100%;
-   background-image: url(../img/education_ribbon.jpeg);
-} */
 
 .questionnaireheading {
     text-align: right;
@@ -74,15 +65,7 @@ header #ribbon {
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 4rem;
-    /* max-width: 960px;  */
 }
-
-/* .container img{
-    margin-right: auto;
-    padding: 0;
-    border-radius: 30px;
-    width: 200px;
-} */
 
 .menu-options ul {
     list-style: none;
@@ -99,28 +82,6 @@ header #ribbon {
 nav img {
     width: 200px;
 }
-
-/* .menu-options ul {
-    list-style: none;
-    display: flex;
-}
-
-.menu-options ul li {
-    margin: 0 1rem;
-}
-
-.menu-options ul li a {
-    text-decoration: none;
-    color: black;
-}
-
-.menu-options ul li a:hover {
-    color: #333;
-}
-
-.logo {
-    padding-left:2rem;
-} */
 
 .custom-border {
     border: 2px solid #684320;
@@ -144,22 +105,11 @@ nav img {
     height: auto;
 }
 
-
-/* #about-us.container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-} */
-
-
 #our-team.container div {
     width: 10%;
     text-align: center;
     margin: 2rem;
     padding: 0;
-    /* flex-basis: 50%; */
     flex-grow: 1;
     flex-wrap: wrap;
 }
@@ -192,7 +142,6 @@ nav img {
 footer {
     color:white;
     background-color: #c9a27d;
-    /* position:fixed; */
     width: 100%
 }
 
@@ -227,15 +176,8 @@ footer a:hover {
 .coffee-img{
     padding: rem;
     width: 100px;
-    /* height: auto; */
 }
 
-/* .education .text {
-    font-weight: bold;
-    font-style: italic;
-    margin: 0;
-    margin-left: 0.5rem;
-} */
 
 .education .square-button {
     float: center;
@@ -247,7 +189,6 @@ footer a:hover {
     border-radius: 20px;
     border: 1px  #00000000;
     padding: .85rem 4rem;
-    /* margin: 1rem 0; */
     margin-bottom: 2em;
 }
 
@@ -264,6 +205,15 @@ footer a:hover {
     bottom: 4px;
     width: 100%;
     left: 0%;
+}
+
+/* Library/filter page */
+
+.drink-img{
+    padding: rem;
+    border-radius: 30px;
+    width: 200px;
+    height: auto;
 }
 
 /* Below is styling for quesitonnaire pages*/
