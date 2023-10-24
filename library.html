@@ -35,7 +35,7 @@
                         aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <h1 class="questionnaireheading d-none d-md-block">Education</h1>
+                <h1 class="questionnaireheading d-none d-md-block">Library</h1>
                 <div class="collapse navbar-collapse menu-options" id="navbarNav">
                     <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                         <li class="nav-item">
@@ -55,7 +55,7 @@
             </nav>
         </header>
         
-        <main class="libary">
+        <main class="library">
             <div class="custom-bg">
                 <section class="d-flex justify-content-center">
                     <div class="row">
@@ -71,21 +71,76 @@
                     alt="Responsive image"
                 >
 
-                <section class="container d-flex justify-content-center">
+                <section class="container d-flex justify-content-center flex-column">
                     <div class="row">
                         <div class="col-sm-12 pb-4">
-                            <p class="h1 custom-bg text-left p-3">About Coffee..</p>
+                            <h1><p class="h1 custom-bg text-left p-3">Filter to Find Your Ideal Coffee!</p></h1>
                         </div>
 
-                        <div class="col-sm-9">
+                        <div class="col-sm-12 text-center">
                             <div>
-                                <p>Welcome to our Coffee Education Page where you can learn about the different types of coffee roasts and even how to make your own drinks! </p>
+                                <input type="radio" class="btn-check">
+                                <label class="btn square-button"><span class="button-text">Search</span></label>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-sm-3">
-                            <div class="d-flex justify-content-center">
-                                <img class="abt-img" src="img/education_beans.png" alt="Beans">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-4 text-center">
+                            <input type="radio" class="btn-check">
+                            <label class="btn square-button"><span class="button-text">Less Bitter</span></label>
+                        </div>
+                        <div class="col-sm-12 col-md-4 text-center">
+                            <input type="radio" class="btn-check">
+                            <label class="btn square-button"><span class="button-text">Medium Bitter</span></label>
+                        </div>
+                        <div class="col-sm-12 col-md-4 text-center">
+                            <input type="radio" class="btn-check">
+                            <label class="btn square-button"><span class="button-text">More Bitter</span></label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12 col-md-4 text-center">
+                            <input type="radio" class="btn-check">
+                            <label class="btn square-button"><span class="button-text">Less Acidity</span></label>
+                        </div>
+                        <div class="col-sm-12 col-md-4 text-center">
+                            <input type="radio" class="btn-check">
+                            <label class="btn square-button"><span class="button-text">Medium Acidity</span></label>
+                        </div>
+                        <div class="col-sm-12 col-md-4 text-center">
+                            <input type="radio" class="btn-check">
+                            <label class="btn square-button"><span class="button-text">More Acidity</span></label>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="container d-flex justify-content-center flex-column">
+                    <div class="row">
+                        <div class="col-sm-12 pb-4">
+                            <h1><p class="h1 custom-bg text-center p-3">Your Selcted Roast:</p></h1>
+                        </div>
+
+                        <div class="col-sm-12 text-center">
+                            <div class="row">
+                                <div class="col-sm-12 pb-4" id="roast-title">
+                                    <p class="h1 custom-bg text-left p-3">Ethiopia Shakiso Mormora (Medium-light)</p>
+                                </div>
+        
+                                <div class="col-sm-9">
+                                    <div>
+                                        <p>Roaster: Revel Coffee (US)</p>
+                                        <p>Origin: Southern Ethiopia</p>
+                                        <p>Tasting notes: Crisply sweet, cocoa-toned. Lemon blossom, roasted cacao nib, date, rice candy, white peppercorn</p>
+                                    </div>
+                                </div>
+        
+                                <div class="col-sm-3">
+                                    <div class="d-flex justify-content-center">
+                                        <img class="img-fluid abt-img" src="img/medium_roast.png" alt="Flat White">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
