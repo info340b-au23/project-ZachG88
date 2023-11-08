@@ -384,3 +384,10 @@ body {
         bottom: 6px;
     }
 }
+
+@media (min-width: 1200px) {
+    .questionnairebody {
+        background-image: url('../img/quizimgs/coffee-beans-background.jpeg');
+        background-size: cover;
+    }
+}
