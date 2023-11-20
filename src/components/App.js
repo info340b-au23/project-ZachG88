@@ -2,16 +2,26 @@ import React, { useState } from 'react';
 import { Footer } from './Footer';
 import { NavBar } from './NavBar';
 import { WelcomeSection,PageRibbon, QuizCard } from './HomePage';
+import { Library } from './Library';
 
 
-export default function App(props) {
+export function App(props) {
     return (
         <div>
-            <NavBar />
-            <WelcomeSection/>
-            <PageRibbon/>
-            <QuizCard />
-            <Footer />
+            <header>
+                <NavBar />
+            </header>
+
+            <main>
+                <WelcomeSection/>
+                <PageRibbon/>
+                <QuizCard />
+                <Library />
+            </main>
+
+            <footer>
+                <Footer />
+            </footer>
         </div>
     );
 }
