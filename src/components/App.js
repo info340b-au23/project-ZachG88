@@ -13,10 +13,10 @@ export function App(props) {
             </header>
 
             <main>
-                <WelcomeSection/>
+                {/* <WelcomeSection/> */}
                 <PageRibbon/>
-                <QuizCard />
-                <Library />
+                {/* <QuizCard /> */}
+                <Library data={props.data}/>
             </main>
 
             <footer>
