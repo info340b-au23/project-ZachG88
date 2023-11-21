@@ -6,13 +6,11 @@ import { PageRibbon } from './HomePage';
 function RoastTypes({imgSrc, type, description}) {
     return (
         <div className="col-sm-12 col-md-4">
-        <div>
-            <p>
-            <img className="coffee-img img-fluid" src={imgSrc} alt={type} />
-            </p>
-            <h3>{type}</h3>
-            <p>{description}</p>
-        </div>
+            <div>
+                <img className="coffee-img img-fluid my-3" src={imgSrc} alt={type} />
+                <h3>{type}</h3>
+                <p>{description}</p>
+            </div>
         </div>
     );
 }
