@@ -1,0 +1,17 @@
+[
+    {
+      "type": "Light",
+      "description": "A lighter brown color. Generally with the most caffeine between the three. A light roast will have more acidity and hold more fruit and floral flavors.",
+      "imgSrc": "img/light_roast.png"
+    },
+    {
+      "type": "Medium",
+      "description": "A medium brown color. Medium roasts will have a more balanced flavor and sweetness.",
+      "imgSrc": "img/medium_roast.png"
+    },
+    {
+      "type": "Dark",
+      "description": "A darker brown color with an oily surface. Dark roasts are generally more bitter with very low acidity.",
+      "imgSrc": "img/dark_roast.png"
+    }
+]

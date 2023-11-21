@@ -32,7 +32,7 @@ nav {
 }
 
 .ribbon {
-    background-image: url('img/education_ribbon.jpeg'); /* Replace with your image path */
+    background-image: url('../public/img/education_ribbon.jpeg'); /* Replace with your image path */
     padding-top: 10rem;
     background-size: cover; /* This will cover the entire background */
     background-position: center; /* Center the image */
