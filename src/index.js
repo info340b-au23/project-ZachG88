@@ -12,5 +12,4 @@ root.render(
   <React.StrictMode>
     <App data={COFFEE_DATA_IMPORT}/>
   </React.StrictMode>
-);
-
+)

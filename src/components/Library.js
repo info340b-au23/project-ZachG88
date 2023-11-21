@@ -242,7 +242,7 @@ function CoffeeTable(props) {
     );
   }
 
-  // function for creating a CoffeeRow, used in the table component. Having a problem accessing the "100g_usd attribute"
+  // function for creating a CoffeeRow, used in the table component. Having a problem accessing the "100g_usd" attribute
   function CoffeeRow({ coffeeObj }) { //coffeeObj = props.coffeeObj    
     return (
       <tr>

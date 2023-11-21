@@ -95,6 +95,10 @@ nav img {
     width: 200px;
     height: auto;
 }
+@media (min-width: 992px) {
+.abt-img{
+    width: 400px;
+}
 
 
 .teams-img{
