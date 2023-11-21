@@ -29,12 +29,12 @@ function DrinkOptions({buttonText}) {
   }
 
 function DrinkTypes({name, ingredients, imgSrc}) {
-    function descLineBreaks() {
-        const ingredientsList = ingredients.split('\n').map((line) => (
+    function ingredientsList() {
+        const ingredientsListItems = ingredients.split('\n').map((line) => (
             <li className="mb-3">{line}</li>
         ));
 
-        return (<ul>{ingredientsList}</ul>);
+        return (<ul>{ingredientsListItems}</ul>);
     }
   
     return (
@@ -45,7 +45,7 @@ function DrinkTypes({name, ingredients, imgSrc}) {
     
             <div className="col-sm-9">
                 <div>
-                    <p>{descLineBreaks()}</p>
+                    <p>{ingredientsList()}</p>
                 </div>
             </div>
     
