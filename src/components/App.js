@@ -5,7 +5,7 @@ import { WelcomeSection,PageRibbon, QuizCard } from './HomePage';
 import { Library } from './Library';
 import { Education } from './Education';
 
-export function App(props) {
+function App(props) {
     return (
         <div>
             <header>
@@ -26,3 +26,5 @@ export function App(props) {
         </div>
     );
 }
+
+export default App;
