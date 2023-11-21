@@ -3,7 +3,7 @@ import { Footer } from './Footer';
 import { NavBar } from './NavBar';
 import { WelcomeSection,PageRibbon, QuizCard } from './HomePage';
 import { Library } from './Library';
-
+import { Education } from './Education';
 
 export function App(props) {
     return (
@@ -14,9 +14,10 @@ export function App(props) {
 
             <main>
                 {/* <WelcomeSection/> */}
-                <PageRibbon/>
+                {/* <PageRibbon/> */}
                 {/* <QuizCard /> */}
-                <Library data={props.data}/>
+                {/* <Library data={props.data}/> */}
+                <Education />
             </main>
 
             <footer>

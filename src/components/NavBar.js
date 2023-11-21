@@ -1,5 +1,4 @@
 import React from "react";
-import iCoffeeLogo from '../img/icoffee_logo.jpeg';
 
 export function NavBar() {
     return (
@@ -7,7 +6,7 @@ export function NavBar() {
 
             <a className = "navbar-brand" href="#/">
                 <img
-                    src= {iCoffeeLogo}
+                    src="img/icoffee_logo.jpeg"
                     height="80"
                     alt="iCoffee Logo"
                     loading="lazy"
