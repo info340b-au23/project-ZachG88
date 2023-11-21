@@ -16,8 +16,8 @@ export function App(props) {
                 {/* <WelcomeSection/> */}
                 {/* <PageRibbon/> */}
                 {/* <QuizCard /> */}
-                {/* <Library data={props.data}/> */}
-                <Education />
+                <Library data={props.data}/>
+                {/* <Education /> */}
             </main>
 
             <footer>
