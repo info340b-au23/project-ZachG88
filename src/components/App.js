@@ -13,11 +13,8 @@ function App(props) {
             </header>
 
             <main>
-                {/* <WelcomeSection/> */}
-                {/* <PageRibbon/> */}
-                {/* <QuizCard /> */}
-                <Library data={props.data}/>
-                {/* <Education /> */}
+                {/* <Library data={props.data}/> */}
+                <Education />
             </main>
 
             <footer>

@@ -3,6 +3,42 @@ import roastTypes from '../data/roastTypes.json';
 import drinkTypes from '../data/drinkTypes.json';
 import { PageRibbon } from './HomePage';
 
+function EducationHeader(props) {
+    return (
+        <section className="d-flex justify-content-center">
+            <div className="row">
+                <div className="col-sm-12 p-5">
+                    <h1>iCoffee Education</h1>
+                </div>
+            </div>
+        </section>
+    );
+}
+
+function EducationIntro(props) {
+    return (
+        <section className="container d-flex justify-content-center">
+            <div className="row">
+                <div className="col-sm-12 pb-4">
+                    <p className="h1 custom-bg text-left p-3">About Coffee...</p>
+                </div>
+
+                <div className="col-sm-9">
+                    <div>
+                        <p>Welcome to our Coffee Education Page where you can learn about the different types of coffee roasts and even how to make your own drinks! </p>
+                    </div>
+                </div>
+
+                 <div className="col-sm-3">
+                    <div className="d-flex justify-content-center">
+                        <img className="abt-img" src="img/education_beans.png" alt="Beans" />
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+}
+
 function RoastTypes({imgSrc, type, description}) {
     return (
         <div className="col-sm-12 col-md-4">
@@ -13,6 +49,17 @@ function RoastTypes({imgSrc, type, description}) {
             </div>
         </div>
     );
+}
+
+function PersonalizedDrinks (props) {
+    <section className="d-flex justify-content-center">
+        <div className="row">
+            <div className="col-sm-12 p-5">
+                <h2 className="text-center pb-2">Make your own personalized drink!</h2>
+                <h3 className="text-center">Use this menu to make your own favorite drinks</h3>
+            </div>
+        </div>
+    </section>
 }
 
 function DrinkOptions({buttonText}) {
@@ -61,36 +108,9 @@ export function Education(props) {
 
     return (
         <main className="education">
-            <section className="d-flex justify-content-center">
-                    <div className="row">
-                        <div className="col-sm-12 p-5">
-                            <h1>iCoffee Education</h1>
-                        </div>
-                    </div>
-            </section>
-            
+            <EducationHeader />
             <PageRibbon/>
-
-            <section className="container d-flex justify-content-center">
-                <div className="row">
-                    <div className="col-sm-12 pb-4">
-                        <p className="h1 custom-bg text-left p-3">About Coffee...</p>
-                    </div>
-
-                    <div className="col-sm-9">
-                        <div>
-                            <p>Welcome to our Coffee Education Page where you can learn about the different types of coffee roasts and even how to make your own drinks! </p>
-                        </div>
-                    </div>
-
-                    <div className="col-sm-3">
-                        <div className="d-flex justify-content-center">
-                            <img className="abt-img" src="img/education_beans.png" alt="Beans" />
-                        </div>
-                    </div>
-                </div>
-            </section>
-
+            <EducationIntro />
             <section className="container d-flex justify-content-center">
                 <div className="row">
                 <div className="col-sm-12 pb-4">
@@ -102,16 +122,7 @@ export function Education(props) {
                 ))}
                 </div>
             </section>
-
-            <section className="d-flex justify-content-center">
-                <div className="row">
-                    <div className="col-sm-12 p-5">
-                        <h2 className="text-center pb-2">Make your own personalized drink!</h2>
-                        <h3 className="text-center">Use this menu to make your own favorite drinks</h3>
-                    </div>
-                </div>
-            </section>
-
+            <PersonalizedDrinks />
             <section className="container d-flex justify-content-center pb-5 flex-column">
                 <div className="row">
                     {drinkOptions.map((buttonText) => (
@@ -119,7 +130,6 @@ export function Education(props) {
                     ))}
                 </div>
             </section>
-    
             <section className="container d-flex justify-content-center flex-column">
                 <div className="col-sm-12 pb-4">
                     <p className="h1 custom-bg text-center m-0">Types of Drinks</p>
