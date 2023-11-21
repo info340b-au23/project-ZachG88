@@ -28,8 +28,8 @@ function DrinkOptions({buttonText}) {
 
 function DrinkTypes({name, ingredients, imgSrc}) {
     function ingredientsList() {
-        const ingredientsListItems = ingredients.split('\n').map((line) => (
-            <li className="mb-3">{line}</li>
+        const ingredientsListItems = ingredients.split('\n').map((line, index) => (
+            <li key={index} className="mb-3">{line}</li>
         ));
 
         return (<ul>{ingredientsListItems}</ul>);
@@ -43,7 +43,7 @@ function DrinkTypes({name, ingredients, imgSrc}) {
     
             <div className="col-sm-9">
                 <div>
-                    <p>{ingredientsList()}</p>
+                    {ingredientsList()}
                 </div>
             </div>
     
