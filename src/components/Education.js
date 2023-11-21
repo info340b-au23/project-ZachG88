@@ -6,13 +6,11 @@ import { PageRibbon } from './HomePage';
 function RoastTypes({imgSrc, type, description}) {
     return (
         <div className="col-sm-12 col-md-4">
-        <div>
-            <p>
-            <img className="coffee-img img-fluid" src={imgSrc} alt={type} />
-            </p>
-            <h3>{type}</h3>
-            <p>{description}</p>
-        </div>
+            <div>
+                <img className="coffee-img img-fluid my-3" src={imgSrc} alt={type} />
+                <h3>{type}</h3>
+                <p>{description}</p>
+            </div>
         </div>
     );
 }
@@ -29,12 +27,12 @@ function DrinkOptions({buttonText}) {
   }
 
 function DrinkTypes({name, ingredients, imgSrc}) {
-    function descLineBreaks() {
-        const ingredientsList = ingredients.split('\n').map((line) => (
+    function ingredientsList() {
+        const ingredientsListItems = ingredients.split('\n').map((line) => (
             <li className="mb-3">{line}</li>
         ));
 
-        return (<ul>{ingredientsList}</ul>);
+        return (<ul>{ingredientsListItems}</ul>);
     }
   
     return (
@@ -45,7 +43,7 @@ function DrinkTypes({name, ingredients, imgSrc}) {
     
             <div className="col-sm-9">
                 <div>
-                    <p>{descLineBreaks()}</p>
+                    <p>{ingredientsList()}</p>
                 </div>
             </div>
     
