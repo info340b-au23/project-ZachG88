@@ -1,8 +1,8 @@
 import React from 'react';
 import { Footer } from './Footer';
 import { NavBar } from './NavBar';
+import { Link } from "react-scroll";
 
-// IntroductionSection Component
 const IntroductionSection = () => (
     <section className="container-sm mt-lg-5">
         <div className="mb-2">
@@ -17,16 +17,21 @@ const IntroductionSection = () => (
     </section>
 );
 
-// PreferenceOption Component for individual options
-const PreferenceOption = ({ name, id, imgSrc, label }) => (
+const PreferenceOption = ({ name, id, imgSrc, label, description }) => (
   <>
     <input type="radio" className="btn-check" name={name} id={id} autoComplete="off" />
     <label className="btn square-button" htmlFor={id}>
       <img src={imgSrc} alt={label} />
-      <span className="button-text">{label}</span>
+      <div className="label-container">
+        <span className="button-text">{label}</span>
+      </div>
+      <div className="description-container">
+        <p className="option-description">{description}</p>
+      </div>
     </label>
   </>
 );
+
 
 // PreferenceSection Component
 const PreferenceSection = ({ title, question, options, name }) => (
@@ -47,6 +52,7 @@ const PreferenceSection = ({ title, question, options, name }) => (
             id={`${name}${index}`}
             imgSrc={option.imgSrc}
             label={option.label}
+            description={option.description} // Add this line
           />
         ))}
       </div>
@@ -87,6 +93,20 @@ export function Quiz() {
     { imgSrc: "img/quizimgs/strong.jpg", label: "Strong" },
   ];
 
+  const resultOptions = [
+    { 
+        imgSrc: "img/Macchiatto.png", 
+        label: "Macchiatto",    },
+    { 
+        imgSrc: "img/Latte.png", 
+        label: "Latte",
+    }
+  ];
+
+  const otherOptions = [
+
+  ];
+
   return (
     <div className="questionnairebody">
       <main className="questionnaire">
@@ -121,9 +141,53 @@ export function Quiz() {
           options={caffeineOptions}
           name="caffeine"
         />
+
         <section className="d-flex align-items-center justify-content-center flex-wrap flex-column m-5">
-          <a href="results.html" className="questionnaireredirect">See Your Results!</a>
+          <Link
+            to="resultSection"
+            smooth={true}
+            duration={500}
+            className="questionnaireredirect"
+          >
+            See Your Results!
+          </Link>
         </section>
+
+        <PreferenceSection
+          title="Here is your result!"
+          options={resultOptions}
+          name='1-2 tsp. of steamed milk
+          1 shot of espresso'
+        />
+
+        <PreferenceSection
+          title="Not sure?"
+          options={otherOptions}
+          name='others'
+        />
+
+        <section className="d-flex align-items-center justify-content-center flex-wrap flex-column m-5">
+          <Link
+            to="resultSection"
+            smooth={true}
+            duration={500}
+            className="questionnaireredirect"
+          >
+            Different between drinks
+          </Link>
+        </section>
+
+        <section className="d-flex align-items-center justify-content-center flex-wrap flex-column m-5">
+          <Link
+            to="resultSection"
+            smooth={true}
+            duration={500}
+            className="questionnaireredirect"
+          >
+            Get a blind box!
+          </Link>
+        </section>
+
       </main>
     </div>
   );

@@ -246,6 +246,17 @@ footer a:hover {
     font-size: 1.5em;
 }
 
+.label-container {
+    text-align: center;
+    margin-bottom: 8px; /* Adjust the spacing as needed */
+  }
+  
+  .option-description {
+    text-align: center;
+    margin-top: 8px; /* Adjust the spacing as needed */
+  }
+  
+
 
 
 /* Below is styling for quesitonnaire pages*/
