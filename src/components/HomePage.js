@@ -103,7 +103,7 @@ export function HomePage(props) {
                     </div>
 
                     {ourTeam.map((team) => (
-                    <OurTeam key={team.type} {...team} />
+                    <OurTeam key={team.name} {...team} />
                     ))}
                 </div>
             </section>
