@@ -365,6 +365,29 @@ body {
     width: 100px;
 }
 
+.questionnairebody .preference-section {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.title-text {
+    margin: 0;
+}
+
+.headerlogo {
+width: 50px;
+height: auto;
+}
+  
+  
+
 @media (min-width: 786px) {
     .questionnaire .btn img {
         display: block;
