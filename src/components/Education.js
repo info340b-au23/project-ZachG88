@@ -52,14 +52,16 @@ function RoastTypes({imgSrc, type, description}) {
 }
 
 function PersonalizedDrinks (props) {
-    <section className="d-flex justify-content-center">
-        <div className="row">
-            <div className="col-sm-12 p-5">
-                <h2 className="text-center pb-2">Make your own personalized drink!</h2>
-                <h3 className="text-center">Use this menu to make your own favorite drinks</h3>
+    return (
+        <section className="d-flex justify-content-center">
+            <div className="row">
+                <div className="col-sm-12 p-5">
+                    <h2 className="text-center pb-2">Make your own personalized drink!</h2>
+                    <h3 className="text-center">Use this menu to make your own favorite drinks</h3>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    );
 }
 
 function DrinkOptions({buttonText}) {

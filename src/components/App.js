@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Footer } from './Footer';
 import { NavBar } from './NavBar';
-import { WelcomeSection,PageRibbon, QuizCard } from './HomePage';
+import { HomePage } from './HomePage';
 import { Library } from './Library';
 import { Education } from './Education';
 
@@ -13,6 +13,7 @@ function App(props) {
             </header>
 
             <main>
+                {/* <HomePage /> */}
                 {/* <Library data={props.data}/> */}
                 <Education />
             </main>
