@@ -90,19 +90,14 @@ nav img {
 
 
 .abt-img{
-    padding: rem;
+    padding: 1rem;
     border-radius: 30px;
     width: 200px;
     height: auto;
 }
-@media (min-width: 992px) {
-.abt-img{
-    width: 400px;
-}
-
 
 .teams-img{
-    padding: rem;
+    padding: 1rem;
     border-radius: 100px;
     border: 5px solid #684320;
     width: 200px;
@@ -178,7 +173,7 @@ footer a:hover {
 /* Added styling for coffee education */
 
 .coffee-img{
-    padding: rem;
+    padding: 1rem;
     width: 100px;
 }
 
@@ -388,6 +383,12 @@ body {
     .questionnaire .button-text {
         font-size: 10px;
         bottom: 1px;
+    }
+}
+
+@media (min-width: 992px) {
+    .abt-img {
+        width: 400px;
     }
 }
 

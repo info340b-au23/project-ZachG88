@@ -1,7 +1,6 @@
 import React from 'react';
-import { Footer } from './Footer';
-import { NavBar } from './NavBar';
 import { Link } from "react-scroll";
+import drinkTypes from '../data/drinkTypes.json';
 
 const IntroductionSection = () => (
     <section className="container-sm mt-lg-5">
@@ -37,13 +36,13 @@ const PreferenceOption = ({ name, id, imgSrc, label, description }) => (
 const PreferenceSection = ({ title, question, options, name }) => (
   <div className="preference-section">
     <div className="title-question-container">
-      <div className="title-container">
+      <div className="title-container d-flex mb-1 ms-3">
         <img className="headerlogo" src="img/HeaderLogo.png" alt={title} />
-        <p className="title-text">{title}</p>
+        <p className="title-text text mt-4 mx-0">{title}</p>
       </div>
-      <p className="question-text ms-3">{question}</p>
     </div>
     <div className="options-container">
+      <p className="question-text options ms-3">{question}</p>
       <div className="btn-group-sm" role="group" aria-label={name}>
         {options.map((option, index) => (
           <PreferenceOption
@@ -60,6 +59,72 @@ const PreferenceSection = ({ title, question, options, name }) => (
   </div>
 );
 
+function Results({selectedDrinks}) {
+  const drinkResults = drinkTypes.filter(function(drink, index) {
+    return selectedDrinks.indexOf(index) !== -1;
+  });
+
+  return (
+    <section>
+      <div className="d-flex mt-lg-5 ms-4 mb-1">
+          <img className="headerlogo" src="img/HeaderLogo.png" alt="coffee"/>
+          <p className="text mt-4 ms-1">Here are your results:</p>
+      </div>
+
+      {drinkResults.map((drink, index) => (
+        <div key={index} className="d-flex align-items-center justify-content-center flex-wrap flex-column">
+          <div className="d-flex mb-2">
+            <div className="p-3">
+              <img className="img-results" src={drink.imgSrc} alt="coffee"/>
+                <div>
+                  <button className="result-buttons">{drink.name}</button>
+                </div>
+            </div>
+            <div className="mt-4 me-4">
+              <ul>
+                {drink.ingredients.split('\n').map((ingredient, index) => (
+                  <li key={index}>{ingredient}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      ))}
+    </section>
+  );
+}
+
+function ResultsSection(props) {
+  return (
+    <section>
+      <Results selectedDrinks={[2, 4]}/>
+      <div>
+        <div className="d-flex mt-5 ms-4 mb-1">
+          <img className="headerlogo" src="img/HeaderLogo.png" alt="coffee"/>
+          <p className="text mt-4 ms-1">Not Sure?</p>
+        </div>
+        <div className="d-flex align-items-center justify-content-center flex-wrap flex-column pb-5">
+          <Link
+            to="resultSection"
+            smooth={true}
+            duration={500}
+            className="questionnaireredirect"
+          >
+            Different between drinks
+          </Link>
+          <Link
+            to="resultSection"
+            smooth={true}
+            duration={500}
+            className="questionnaireredirect"
+          >
+            Get a blind box!
+          </Link>
+        </div>  
+      </div>
+    </section>
+  );
+}
 
 // QuizPage Component
 export function Quiz() {
@@ -113,34 +178,36 @@ export function Quiz() {
         <div>
           <IntroductionSection />
         </div>
-        <div>
+        <section className="d-flex align-items-center justify-content-center flex-wrap flex-column m-5">
+          <div>
+            <PreferenceSection
+              title="Temperature Preference"
+              question="Would you like an iced or a hot drink?"
+              options={temperatureOptions}
+              name="temperature"
+            />
+          </div>
+          <div>
+            <PreferenceSection
+              title="Milk Preference"
+              question="What kind of milk do you prefer?"
+              options={milkOptions}
+              name="milk"
+            />
+          </div>
           <PreferenceSection
-            title="Temperature Preference"
-            question="Would you like an iced or a hot drink?"
-            options={temperatureOptions}
-            name="temperature"
+            title="Flavor Preference"
+            question="What kind of syrup do you prefer?"
+            options={flavorOptions}
+            name="flavor"
           />
-        </div>
-        <div>
           <PreferenceSection
-            title="Milk Preference"
-            question="What kind of milk do you prefer?"
-            options={milkOptions}
-            name="milk"
+            title="Caffeine Preference"
+            question="How much caffeine do you prefer?"
+            options={caffeineOptions}
+            name="caffeine"
           />
-        </div>
-        <PreferenceSection
-          title="Flavor Preference"
-          question="What kind of syrup do you prefer?"
-          options={flavorOptions}
-          name="flavor"
-        />
-        <PreferenceSection
-          title="Caffeine Preference"
-          question="How much caffeine do you prefer?"
-          options={caffeineOptions}
-          name="caffeine"
-        />
+        </section>
 
         <section className="d-flex align-items-center justify-content-center flex-wrap flex-column m-5">
           <Link
@@ -153,7 +220,7 @@ export function Quiz() {
           </Link>
         </section>
 
-        <PreferenceSection
+        {/* <PreferenceSection
           title="Here is your result!"
           options={resultOptions}
           name='1-2 tsp. of steamed milk
@@ -164,30 +231,10 @@ export function Quiz() {
           title="Not sure?"
           options={otherOptions}
           name='others'
-        />
-
-        <section className="d-flex align-items-center justify-content-center flex-wrap flex-column m-5">
-          <Link
-            to="resultSection"
-            smooth={true}
-            duration={500}
-            className="questionnaireredirect"
-          >
-            Different between drinks
-          </Link>
-        </section>
-
-        <section className="d-flex align-items-center justify-content-center flex-wrap flex-column m-5">
-          <Link
-            to="resultSection"
-            smooth={true}
-            duration={500}
-            className="questionnaireredirect"
-          >
-            Get a blind box!
-          </Link>
-        </section>
-
+        /> */}
+        <div>
+          <ResultsSection />
+        </div>
       </main>
     </div>
   );

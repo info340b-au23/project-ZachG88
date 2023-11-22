@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { Footer } from './Footer';
 import { NavBar } from './NavBar';
-import { WelcomeSection, PageRibbon, QuizCard } from './HomePage';
+import { HomePage } from './HomePage';
 import { Library } from './Library';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Quiz } from './Questionnaire';
+import { Education } from './Education';
 
 export function App(props) {
     const [showQuiz, setShowQuiz] = useState(false);
@@ -25,9 +26,9 @@ export function App(props) {
                         <Quiz />
                     ) : (
                         <>
-                            <WelcomeSection />
-                            <QuizCard onClick={toggleQuiz} />
-                            <Library data={props.data}/>
+                            <HomePage toggleQuiz={toggleQuiz}/>
+                            {/* <Library data={props.data}/> */}
+                            {/* <Education /> */}
                         </>
                     )}
                 </main>
