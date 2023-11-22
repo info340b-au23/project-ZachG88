@@ -1,9 +1,6 @@
 import React from "react";
-import ribbon from '../img/education_ribbon.jpeg';
+// import ribbon from '/img/education_ribbon.jpeg';
 import { Quiz } from './Questionnaire' 
-import { Footer } from './Footer';
-import { NavBar } from './NavBar';
-import {Routes, Route, useNavigate} from 'react-router-dom';
 
 export function WelcomeSection() {
 
@@ -22,7 +19,7 @@ export function PageRibbon() {
 
     return(
         <div className ="col-sm-12">
-            <img src={ribbon}
+            <img src="img/education_ribbon.jpeg"
             className="img-fluid shadow-lg" 
             alt="Responsive ribbon"></img>
         </div>

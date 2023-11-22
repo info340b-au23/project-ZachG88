@@ -1,0 +1,22 @@
+[
+    {
+      "imgSrc": "img/zach_2.jpeg",
+      "name": "Zach Gendreau",
+      "description": "Hey, it's Zach. I'm a Junior studying Data Science and Applied Math. I am always down for a single-origin oat cortado!"
+    },
+    {
+      "imgSrc": "img/IMG_5561.jpg",
+      "name": "Emily Blakeman",
+      "description": "Hi! I’m Emily! I’m majoring in Informatics, Human-Computer Interactions and LOVE chai tea lattes + dogs!"
+    },
+    {
+      "imgSrc": "img/shufan_2.png",
+      "name": "Shufan Wang",
+      "description": "Hi! This is Shufan and majoring Informatics and minoring in Business. My favorite drink is a Latte. Also I have a cat named Latte :)"
+    },
+    {
+      "imgSrc": "img/nathan.png",
+      "name": "Nathan Nguyen",
+      "description": "Hi! My name is Nathan and I’m studying Informatics. I love to do origami and love drinking cappuccinos!"
+    }
+]

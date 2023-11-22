@@ -192,10 +192,13 @@ function CoffeeTable(props) {
                     active={sortByCriteria === 'name'}
                     ascending={isAscending && sortByCriteria === 'name'}/>
                     </th>                                              
-                    {/* <th className="text-left">
+                    <th className="text-left">
                     Price per 100g
-                    
-                    </th> */}
+                    <SortButton name="g_USD"
+                    onClick={handleClick} 
+                    active={sortByCriteria === 'g_USD'}
+                    ascending={isAscending && sortByCriteria === 'g_USD'}/>
+                    </th>
                     <th className="text-left">
                     Rating
                     <SortButton name="rating"
@@ -242,7 +245,7 @@ function CoffeeTable(props) {
     );
   }
 
-  // function for creating a CoffeeRow, used in the table component. Having a problem accessing the "100g_usd attribute"
+  // function for creating a CoffeeRow, used in the table component. Having a problem accessing the "100g_usd" attribute
   function CoffeeRow({ coffeeObj }) { //coffeeObj = props.coffeeObj    
     return (
       <tr>
@@ -251,8 +254,11 @@ function CoffeeTable(props) {
         <td>{coffeeObj.roast}</td>
         <td>{coffeeObj.loc_country}</td>
         <td>{coffeeObj.origin_1} and {coffeeObj.origin_2}</td>
-        {/* <td>{coffeeObj['100g_usd']}</td> */}
+        {/* <td>{coffeeObj['100g_USD']}</td> */}
+        <td>{coffeeObj.g_USD}</td>
+        {/* <td>{coffeeObj.rating}</td> */}
         <td>{coffeeObj.rating}</td>
+
       </tr>
     );
   }
