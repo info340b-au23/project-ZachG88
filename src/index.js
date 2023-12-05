@@ -4,6 +4,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { App } from './components/App';
 import COFFEE_DATA_IMPORT from './data/coffee_analysis.csv';
 import './style.css';
+import { BrowserRouter } from 'react-router-dom';
+
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
@@ -29,7 +31,7 @@ const analytics = getAnalytics(app);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <BrowserRouter>
     <App data={COFFEE_DATA_IMPORT}/>
-  </React.StrictMode>
+  </BrowserRouter>
 )

@@ -1,5 +1,7 @@
 import React from "react";
 import ourTeam from '../data/ourTeam.json';
+import { Link } from 'react-router-dom';
+
 
 function WelcomeSection(props) {
     return (
@@ -37,7 +39,8 @@ export function QuizCard(props) {
                 <div className="card-body">
                     <h5 className="card-title">Find the Right Cup of Coffee For You!</h5>
                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="questionnaire.html" className="btn nav-color" onClick={handleClick}>Take the quiz!</a>
+                    {/* <a href="questionnaire.html" className="btn nav-color" onClick={handleClick}>Take the quiz!</a> */}
+                    <Link className="nav-link btn nav-color" to="/quiz">Take the quiz!</Link>
                 </div>
             </div>
         </section>
