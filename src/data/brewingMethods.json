@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Drip Coffee Maker",
+    "strength": "medium",
+    "type": "drip",
+    "description": "Done by allowing hot water to evenly saturate coffee grounds. Ideal for those who prefer a convenient and consistent brewing method."
+  },
+  {
+    "name": "Espresso",
+    "strength": "strong",
+    "type": "manual",
+    "description": "This manual method provides a strong base for various coffee drinks like lattes and cappuccinos."
+  },
+  {
+    "name": "French Press",
+    "strength": "strong",
+    "type": "immersion",
+    "description": "Immerse coffee grounds in hot water to create a rich brew."
+  },
+  {
+    "name": "Pour Over",
+    "strength": "medium",
+    "type": "manual",
+    "description": "Done through precise pouring. This manual pour-over method offers control over various aspects of brewing."
+  },
+  {
+    "name": "AeroPress",
+    "strength": "medium",
+    "type": "manual",
+    "description": "A more versatile manual brewing method as it combines immersion and pressure to produce a smooth and rich coffee with customizable intensity."
+  },
+  {
+    "name": "Cold Brew",
+    "strength": "medium",
+    "type": "immersion",
+    "description": "Done through steeping coarse coffee grounds in cold water for an extended period, resulting in a refreshing drink."
+  },
+  {
+    "name": "Turkish Coffee",
+    "strength": "strong",
+    "type": "manual",
+    "description": "Finely ground coffee, water, and sugar (optional) are simmered in a special pot, producing a strong and aromatic drink."
+  },
+  {
+    "name": "Moka Pot",
+    "strength": "strong",
+    "type": "manual",
+    "description": "Produces a strong coffee similar to espresso, but not as concentrated."
+  },
+  {
+    "name": "Siphon (Vacuum Pot)",
+    "strength": "medium",
+    "type": "manual",
+    "description": "A more visual and aesthetic brewing process that creates an exceptional and clean cup of coffee."
+  },
+  {
+    "name": "Single-Serve Coffee Pods",
+    "strength": "light",
+    "type": "drip",
+    "description": "Ideal for quick and consistent cups of coffee with minimal effort and cleanup."
+  }
+]

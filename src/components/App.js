@@ -8,6 +8,8 @@ import { Routes, Route } from 'react-router-dom';
 
 import { Quiz } from './Questionnaire';
 import { Education } from './Education';
+import ErrorPage from './ErrorPage';
+import { Footer } from './Footer';
 
 export function App(props) {
     const [showQuiz, setShowQuiz] = useState(false);
@@ -47,12 +49,14 @@ export function App(props) {
             <NavBar/>
             <Routes>
                 <Route index element={<HomePage toggleQuiz={toggleQuiz}/>} />
-                    <Route path="quiz" element={<Quiz />} />
+                <Route path="quiz" element={<Quiz />} />
                 {/* <Route path="questionnaire" element={<Library data={props.data}/>} /> */}
                 <Route path="library" element={<Library data={props.data}/>} />
                 <Route path="education" element={<Education />} />
                 {/* <Route path="chat" element={<ChatPage currentUser={currentUser} />} /> */}
+                <Route path="*" element={<ErrorPage />} />
             </Routes>
+            <Footer />
         </div>
     )
 }

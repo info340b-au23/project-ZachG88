@@ -175,37 +175,11 @@ footer a:hover {
 /* Added styling for coffee education */
 
 .coffee-img{
-    padding: rem;
     width: 100px;
 }
 
-
-.education .square-button {
-    float: center;
-    position: relative;
-    height: 30px;
-    width: 80px;
-    background-color: #E8CAAF;
-    box-shadow: 0 1px 3px #00000029, 0 1px 3px #0000003b;
-    border-radius: 20px;
-    border: 1px  #00000000;
-    padding: .85rem 4rem;
-    margin-bottom: 2em;
-}
-
-.choice-container .row {
-    max-width: 70%;
-}
-.education .options {
-    font-style: italic;
-    font-size: 14px;
-}
-  
-.education .button-text {
-    position: absolute;
-    bottom: 2px;
-    width: 100%;
-    left: 0%;
+.brewmethods{
+    width: 300px;
 }
 
 /* Library/filter page */
