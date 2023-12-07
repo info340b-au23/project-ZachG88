@@ -6,14 +6,13 @@ export function NavBar() {
     return (
         <nav className="navbar navbar-expand-sm navbar-light nav-color">
 
-            <a className = "navbar-brand" href="#/">
-                <img
+            <Link className="nav-link navbar-brand" to="/"> <img
                     src="img/icoffee_logo.jpeg"
                     height="80"
                     alt="iCoffee Logo"
                     loading="lazy"
                 />
-            </a>
+            </Link>
 
             <button className = "navbar-toggler" 
                     type="button" 
