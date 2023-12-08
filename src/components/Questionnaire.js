@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from "react-scroll";
+// import { Link } from "react-scroll";
+import { Link } from 'react-router-dom';
 import drinkTypes from '../data/drinkTypes.json';
 
 const IntroductionSection = () => (
@@ -105,17 +106,13 @@ function ResultsSection(props) {
         </div>
         <div className="d-flex align-items-center justify-content-center flex-wrap flex-column pb-5">
           <Link
-            to="resultSection"
-            smooth={true}
-            duration={500}
+            to="/education"
             className="questionnaireredirect"
           >
             Different between drinks
           </Link>
           <Link
             to="resultSection"
-            smooth={true}
-            duration={500}
             className="questionnaireredirect"
           >
             Get a blind box!
