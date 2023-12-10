@@ -1,50 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from 'react-router-dom';
-
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
 
 export function NavBar() {
-    return (
-        <nav className="navbar navbar-expand-sm navbar-light nav-color">
+    const [expanded, setExpanded] = useState(false);
 
-            <Link className="nav-link navbar-brand" to="/"> <img
+    const handleClick = () => {
+        setExpanded(!expanded);
+    };
+
+    return (
+        <Navbar expand="sm">
+            <Navbar.Brand as={Link} to="/">
+                <img
                     src="img/icoffee_logo.jpeg"
                     height="80"
                     alt="iCoffee Logo"
                     loading="lazy"
                 />
-            </Link>
+            </Navbar.Brand>
 
-            <button className = "navbar-toggler" 
-                    type="button" 
-                    data-md-toggle="collapse"
-                    data-md-target="#navbarNav" 
-                    aria-controls="navbarNav"
-                    aria-expanded="false" 
-                    aria-label="Toggle navigation">
-                <span className = "navbar-toggler-icon"></span>
-            </button>
+            <Navbar.Toggle onClick={handleClick} />
 
-
-            <div className = "collapse navbar-collapse menu-options" id="navbarNav">
-                <ul className = "navbar-nav ml-auto mb-2 mb-lg-0">
-                    <li className = "nav-item">
-                        {/* <a className = "nav-link" aria-current="page" href="index.html">Home</a> */}
-                        <Link className="nav-link" to="/">Home</Link>
-                    </li>
-                    <li className = "nav-item">
-                        {/* <a className = "nav-link" href="questionnaire.html">Quiz</a> */}
-                        <Link className="nav-link" to="/quiz">Quiz</Link>
-                    </li>
-                    <li className = "nav-item">
-                        {/* <a className = "nav-link" href="education.html">Education</a> */}
-                        <Link className="nav-link" to="/education">Education</Link>
-                    </li>
-                    <li className = "nav-item">
-                        {/* <a className = "nav-link" href="library.html">Library</a> */}
-                        <Link className="nav-link" to="/library">Library</Link>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+            <Navbar.Collapse in={expanded}>
+                <Nav className="ms-auto me-4">
+                    <Nav.Link className="ms-3" as={Link} to="/" onClick={handleClick}>Home</Nav.Link>
+                    <Nav.Link className="ms-3" as={Link} to="/quiz" onClick={handleClick}>Quiz</Nav.Link>
+                    <Nav.Link className="ms-3" as={Link} to="/education" onClick={handleClick}>Education</Nav.Link>
+                    <Nav.Link className="ms-3" as={Link} to="/library" onClick={handleClick}>Library</Nav.Link>
+                </Nav>
+            </Navbar.Collapse>
+        </Navbar>
     );
 }
+
