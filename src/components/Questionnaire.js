@@ -109,10 +109,10 @@ function ResultsSection(props) {
             to="/education"
             className="questionnaireredirect"
           >
-            Different between drinks
+            Difference between drinks
           </Link>
           <Link
-            to="resultSection"
+            to="/blindbox"
             className="questionnaireredirect"
           >
             Get a blind box!

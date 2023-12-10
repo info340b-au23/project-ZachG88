@@ -10,6 +10,7 @@ import { Quiz } from './Questionnaire';
 import { Education } from './Education';
 import ErrorPage from './ErrorPage';
 import { Footer } from './Footer';
+import { Blindbox} from './Result';
 
 export function App(props) {
     const [showQuiz, setShowQuiz] = useState(false);
@@ -53,6 +54,7 @@ export function App(props) {
                 {/* <Route path="questionnaire" element={<Library data={props.data}/>} /> */}
                 <Route path="library" element={<Library data={props.data}/>} />
                 <Route path="education" element={<Education />} />
+                <Route path="blindbox" element={<Blindbox />} />
                 {/* <Route path="chat" element={<ChatPage currentUser={currentUser} />} /> */}
                 <Route path="*" element={<ErrorPage />} />
             </Routes>
