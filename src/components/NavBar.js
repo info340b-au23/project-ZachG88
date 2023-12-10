@@ -21,14 +21,14 @@ export function NavBar() {
                 />
             </Navbar.Brand>
 
-            <Navbar.Toggle onClick={handleClick} />
+            <Navbar.Toggle className="me-4" onClick={handleClick} />
 
             <Navbar.Collapse in={expanded}>
                 <Nav className="ms-auto me-4">
-                    <Nav.Link className="ms-3" as={Link} to="/" onClick={handleClick}>Home</Nav.Link>
-                    <Nav.Link className="ms-3" as={Link} to="/quiz" onClick={handleClick}>Quiz</Nav.Link>
-                    <Nav.Link className="ms-3" as={Link} to="/education" onClick={handleClick}>Education</Nav.Link>
-                    <Nav.Link className="ms-3" as={Link} to="/library" onClick={handleClick}>Library</Nav.Link>
+                    <Nav.Link className="text-center ms-3" as={Link} to="/" onClick={handleClick}>Home</Nav.Link>
+                    <Nav.Link className="text-center ms-3" as={Link} to="/quiz" onClick={handleClick}>Quiz</Nav.Link>
+                    <Nav.Link className="text-center ms-3" as={Link} to="/education" onClick={handleClick}>Education</Nav.Link>
+                    <Nav.Link className="text-center ms-3" as={Link} to="/library" onClick={handleClick}>Library</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
