@@ -32,17 +32,16 @@ nav {
 }
 
 .ribbon {
-    background-image: url('../public/img/education_ribbon.jpeg'); /* Replace with your image path */
+    background-image: url('../public/img/education_ribbon.jpeg');
     padding-top: 10rem;
-    background-size: cover; /* This will cover the entire background */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
 main img {
     width: 100%;
-    /* text-shadow: 10px 10px #153c43; */
 }
 
 .container {
@@ -91,7 +90,6 @@ nav img {
 
 
 .abt-img{
-    padding: rem;
     border-radius: 30px;
     width: 200px;
     height: auto;
@@ -99,7 +97,6 @@ nav img {
 
 
 .teams-img{
-    padding: rem;
     border-radius: 100px;
     border: 5px solid #684320;
     width: 200px;
@@ -143,7 +140,7 @@ nav img {
 footer {
     color:white;
     background-color: #c9a27d;
-    width: 100%
+    width: 100%;
 }
 
 footer .container {
@@ -152,7 +149,6 @@ footer .container {
     justify-content: center;
     padding: 1rem;
 }
-
 
 footer p {
     margin: 0 2rem;
@@ -222,18 +218,15 @@ footer a:hover {
 
 .label-container {
     text-align: center;
-    margin-bottom: 8px; /* Adjust the spacing as needed */
+    margin-bottom: 8px;
   }
   
   .option-description {
     text-align: center;
-    margin-top: 8px; /* Adjust the spacing as needed */
+    margin-top: 8px;
   }
-  
 
-
-
-/* Below is styling for quesitonnaire pages*/
+/* Below is styling for questionnaire pages*/
 
 body {
     font-family: 'Young Serif', 'Poppins', sans-serif;
@@ -244,16 +237,6 @@ body {
     margin: 0;
     padding: 0;
   }
-
-  /* body.homebody {
-    font-family: 'Young Serif', 'Poppins', sans-serif;
-    height: 100%;
-    background-color: #FFFCF9;
-    background-size: cover;
-    color: #341102;
-    margin: 0;
-    padding: 0;
-  } */
 
 #questionnaireheading {
     text-align: center;
@@ -266,13 +249,6 @@ body {
     width: auto;
     margin-top: .5em;
 }
-
-/* .questionnaire .menu {
-    position: fixed;
-    bottom: 0;
-    height: 3.72em;
-    width: auto;
-} */
 
 .questionnaire .text {
     font-weight: bold;
@@ -370,8 +346,43 @@ body {
 width: 50px;
 height: auto;
 }
+
+.blindbox {
+    border: 2px solid #000000;
+    background-color: #E8CAAF;
+}
+
+.profilesignin {
+    padding: 1em;
+    border-radius: 20px;
+    background-color: #E8CAAF;
+    color: #341102;
+    box-shadow: 0 1px 3px #00000029, 0 1px 3px #0000003b;
+    margin: 1rem;
+}
+
+.profilesignintext {
+    background-color: #E8CAAF;
+}
+
+.profiledelbutton {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 14px;
+    padding: .35em;
+    border-radius: 10px;
+    background-color: #E8CAAF;
+    color: #341102;
+    box-shadow: 0 1px 3px #00000029, 0 1px 3px #0000003b;
+    margin: 1rem;
+}
   
-  
+.profiledelbutton:hover {
+    background-color: #C9A27D;
+}
 
 @media (min-width: 786px) {
     .questionnaire .btn img {

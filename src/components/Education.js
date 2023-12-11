@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import roastTypes from '../data/roastTypes.json';
 import brewingMethodsData from '../data/brewingMethods.json';
 import drinkTypes from '../data/drinkTypes.json';
@@ -52,7 +53,7 @@ function RoastTypes({imgSrc, type, description}) {
     );
 }
 
-function CoffeeBrewingMethods(props) {
+function CoffeeBrewingMethods({ currentUser, saveFavorite }) {
     const [preferredStrength, setPreferredStrength] = useState('light');
     const [preferredType, setPreferredType] = useState('drip');
     const [recommendedMethods, setRecommendedMethods] = useState([]);
@@ -67,12 +68,21 @@ function CoffeeBrewingMethods(props) {
         setRecommendedMethods(filteredMethods);
         setButtonClicked(true);
     };
+
+    const handleFavorite = (method) => {
+        if (currentUser) {
+            saveFavorite(currentUser.uid, method);
+        }
+    };
   
     return (
-        <div className="container d-flex justify-content-center flex-column">
+        <section className="container d-flex justify-content-center flex-column">
             <div className="col-sm-12 pb-4">
                 <p className="h1 custom-bg text-center m-0">Different Brewing Methods</p>
-                <p className="text-center m-3">Select different options for strength and the brewing type to get recommendations based on your preferences!</p>
+                <p className="text-center m-3">Select different options for strength and the brewing type to get recommendations!</p>
+                <p className="text-center">
+                    <Link to="/profile">Sign in</Link> to save recommendations to your profile!
+                </p>
             </div>
             
             <div className="d-flex align-items-center justify-content-center flex-wrap flex-column">
@@ -113,12 +123,15 @@ function CoffeeBrewingMethods(props) {
                             <li key={method.name}>
                                 <p className="fw-bold m-0">{method.name}</p>
                                 <p> {method.description}</p>
+                                {currentUser && (
+                                    <button className="profiledelbutton" onClick={() => (handleFavorite(method))}>Add to Favorites</button>
+                                )}
                             </li>
                         ))}
                     </ul>
                 </div>
             )}
-        </div>
+        </section>
     );
 };
 
@@ -170,7 +183,7 @@ export function Education(props) {
                     ))}
                 </div>
             </section>
-            <CoffeeBrewingMethods />
+            <CoffeeBrewingMethods {...props}/>
             <section className="container d-flex justify-content-center flex-column">
                 <div className="col-sm-12 pb-4">
                     <p className="h1 custom-bg text-center m-0">Types of Drinks</p>

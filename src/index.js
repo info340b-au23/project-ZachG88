@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.css';
-import { App } from './components/App';
+import App from './components/App';
 import COFFEE_DATA_IMPORT from './data/coffee_analysis.csv';
 import './style.css';
 import { BrowserRouter } from 'react-router-dom';
@@ -9,7 +9,6 @@ import { BrowserRouter } from 'react-router-dom';
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -18,6 +17,7 @@ import { getAnalytics } from "firebase/analytics";
 const firebaseConfig = {
   apiKey: "AIzaSyDdPi1jpjr-PPnH-3k0OnQYTsRZozc1McU",
   authDomain: "icoffee-e298d.firebaseapp.com",
+  databaseURL: "https://icoffee-e298d-default-rtdb.firebaseio.com",
   projectId: "icoffee-e298d",
   storageBucket: "icoffee-e298d.appspot.com",
   messagingSenderId: "508110516583",
@@ -26,8 +26,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+initializeApp(firebaseConfig);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

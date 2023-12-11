@@ -1,47 +1,47 @@
 [
     {
       "name": "Cortado",
-      "ingredients": "1 shot of espresso\n1 oz. of warm milk\n1 cm of foam\nInto a 5 oz rocks glass",
+      "ingredients": "1 shot of espresso.\n1 oz. of warm milk.\n1 cm of foam.\nInto a 5 oz rocks glass.",
       "imgSrc": "img/Cortado.png"
     },
     {
       "name": "Ristretto",
-      "ingredients": "1 shot of espresso into a 2-4 oz. espresso cup, however use half the amount of water as a regular espresso",
+      "ingredients": "1 shot of espresso into a 2-4 oz. espresso cup, however use half the amount of water as a regular espresso.",
       "imgSrc": "img/Ristretto.png"
     },
     {
       "name": "Latte",
-      "ingredients": "1 shot of espresso\n8-10 oz. of steamed milk\n1 cm of foam\nInto a 6-9 oz. coffee mug",
+      "ingredients": "1 shot of espresso.\n8-10 oz. of steamed milk.\n1 cm of foam.\nInto a 6-9 oz. coffee mug.",
       "imgSrc": "img/Latte.png"
     },
     {
       "name": "Cappuccino",
-      "ingredients": "1-2 shots of espresso\n2 oz. of steamed milk\n2 oz. of foamed milk\nInto a 6-8 oz. cappuccino mug",
+      "ingredients": "1-2 shots of espresso.\n2 oz. of steamed milk.\n2 oz. of foamed milk.\nInto a 6-8 oz. cappuccino mug.",
       "imgSrc": "img/Cappaccuno.png"
     },
     {
       "name": "Macchiatto",
-      "ingredients": "1-2 tsp. of steamed milk\n1 shot of espresso",
+      "ingredients": "1-2 tsp. of steamed milk.\n1 shot of espresso.",
       "imgSrc": "img/Macchiatto.png"
     },
     {
       "name": "Mocha",
-      "ingredients": "1 shot of espresso\n1-2 oz. of chocolate syrup\n1-3 oz. of steamed milk\n2-3 cm of foam or whipped cream\nIn a 6-8 oz. mug",
+      "ingredients": "1 shot of espresso.\n1-2 oz. of chocolate syrup.\n1-3 oz. of steamed milk.\n2-3 cm of foam or whipped cream.\nIn a 6-8 oz. mug.",
       "imgSrc": "img/Mocha.png"
     },
     {
       "name": "Americano",
-      "ingredients": "1 shot of espresso\n3 oz. of hot water\n5-6 oz. coffee mug",
+      "ingredients": "1 shot of espresso.\n3 oz. of hot water.\n5-6 oz. coffee mug.",
       "imgSrc": "img/Americano.png"
     },
     {
       "name": "Flat White",
-      "ingredients": "1 shot of espresso\n4 oz. of steamed milk\nIn a 6 oz. tumbler",
+      "ingredients": "1 shot of espresso.\n4 oz. of steamed milk.\nIn a 6 oz. tumbler.",
       "imgSrc": "img/Flat-White.png"
     },
     {
       "name": "Frappuccino",
-      "ingredients": "2 cups of ice\n1 cup coffee\n1 cup milk\nBlend in blender\nIn a 16 oz. glass",
+      "ingredients": "2 cups of ice.\n1 cup coffee.\n1 cup milk.\nBlend in blender.\nIn a 16 oz. glass.",
       "imgSrc": "img/Frapppuccino.png"
     }
   ]

@@ -1,24 +1,21 @@
 import React, { useState } from 'react';
-import roastTypes from '../data/roastTypes.json';
-import brewingMethodsData from '../data/brewingMethods.json';
 import drinkTypes from '../data/drinkTypes.json';
-import { PageRibbon } from './HomePage';
 
 function EducationHeader(props) {
     return (
         <section className="d-flex justify-content-center">
             <div className="row">
                 <div className="col-sm-12 p-5 text-center">
-                    <h2>Open a Blind box for a ramdom coffee:</h2>
-                    <button onClick={props.onSelectRandomCoffee}>Open the box now!</button>
+                    <h2>Open a Blind Box for a Random Coffee Drink!</h2>
+                    <button className="questionnaireredirect mx-auto m-3" onClick={props.onSelectRandomCoffee}>Click here to open!</button>
                     {props.selectedCoffee && (
-                        <div>
+                        <div className="blindbox p-3">
                             <h2>{props.selectedCoffee.name}</h2>
                             <p>{props.selectedCoffee.ingredients}</p>
-                            <img src={props.selectedCoffee.imgSrc} alt={props.selectedCoffee.name} />
+                            <img className="abt-img border border-dark border-2 m-3" src={props.selectedCoffee.imgSrc} alt={props.selectedCoffee.name} />
                         </div>
                     )}
-                    <h3>Hope you enjoy it</h3>
+                    <h3 className="mt-4">Hope you enjoy it!</h3>
                 </div>
             </div>
         </section>
@@ -34,7 +31,7 @@ export function Blindbox(props) {
     };
 
     return (
-        <main className="blindbox">
+        <main>
             <EducationHeader selectedCoffee={selectedCoffee} onSelectRandomCoffee={selectRandomCoffee} />
         </main>
     );
