@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 // import { Link } from "react-scroll";
 import { Link } from 'react-router-dom';
 import drinkTypes from '../data/drinkTypes.json';
+
+
+
 
 const IntroductionSection = () => (
     <section className="container-sm mt-lg-5">
@@ -17,24 +20,38 @@ const IntroductionSection = () => (
     </section>
 );
 
-const PreferenceOption = ({ name, id, imgSrc, label, description }) => (
-  <>
-    <input type="radio" className="btn-check" name={name} id={id} autoComplete="off" />
-    <label className="btn square-button" htmlFor={id}>
-      <img src={imgSrc} alt={label} />
-      <div className="label-container">
-        <span className="button-text">{label}</span>
-      </div>
-      <div className="description-container">
-        <p className="option-description">{description}</p>
-      </div>
-    </label>
-  </>
-);
+const PreferenceOption = ({ name, id, imgSrc, label, description, handlePreferenceChange }) => {
+  const handleOptionSelect = (event) => {
+    if (event.target.checked) {
+      handlePreferenceChange(label);
+    }
+  };
 
+  return (
+    <>
+      <input
+        type="radio"
+        className="btn-check"
+        name={name}
+        id={id}
+        autoComplete="off"
+        onChange={handleOptionSelect}
+      />
+      <label className="btn square-button" htmlFor={id}>
+        <img src={imgSrc} alt={label} />
+        <div className="label-container">
+          <span className="button-text">{label}</span>
+        </div>
+        <div className="description-container">
+          <p className="option-description">{description}</p>
+        </div>
+      </label>
+    </>
+  );
+};
 
 // PreferenceSection Component
-const PreferenceSection = ({ title, question, options, name }) => (
+const PreferenceSection = ({ title, question, options, name, handlePreferenceChange }) => (
   <div className="preference-section">
     <div className="title-question-container">
       <div className="title-container d-flex mb-1 ms-3">
@@ -52,7 +69,8 @@ const PreferenceSection = ({ title, question, options, name }) => (
             id={`${name}${index}`}
             imgSrc={option.imgSrc}
             label={option.label}
-            description={option.description} // Add this line
+            description={option.description}
+            handlePreferenceChange={handlePreferenceChange}
           />
         ))}
       </div>
@@ -60,10 +78,67 @@ const PreferenceSection = ({ title, question, options, name }) => (
   </div>
 );
 
-function Results({selectedDrinks}) {
-  const drinkResults = drinkTypes.filter(function(drink, index) {
-    return selectedDrinks.indexOf(index) !== -1;
-  });
+function Results({
+  temperaturePreference,
+  basePreference,
+  flavorPreference,
+  caffeinePreference}
+  ) {
+  let drink;
+  let index;
+  const Latte = drinkTypes[2];
+  const Americano = drinkTypes[6];
+
+  if(basePreference === "Water"){
+    drink = Americano;
+    index = 6;
+  }else{
+    drink = Latte;
+    index = 2;
+  }
+
+  const constructIngredients = () => {
+    const defaultValues = {
+      Temperature: "Served hot",
+      Base: "8 oz of 2% milk",
+      Flavor: "No flavor",
+      Caffeine: "1 espresso shot"
+      // Add more default values for each preference
+    };
+
+    let numberOfShots = "";
+    switch (caffeinePreference) {
+      case "None":
+        numberOfShots = "no";
+        break;
+      case "Light":
+        numberOfShots = "1";
+        break;
+      case "Medium":
+        numberOfShots = "2";
+        break;
+      case "Strong":
+        numberOfShots = "3";
+        break;
+      default:
+        numberOfShots = "1"; // You can set a default value here if needed
+        break;
+    }
+
+    const preferences = {
+      Temperature: temperaturePreference ? (`Served ${temperaturePreference.toLowerCase()}`) : defaultValues.Temperature,
+      Base: basePreference ? `With 8oz of ${basePreference.toLowerCase()} ${index === 6 ? "" : "milk" }` : defaultValues.Base,
+      Flavor: flavorPreference ? `With 2 pumps of ${flavorPreference.toLowerCase()}` : defaultValues.Flavor,
+      Caffeine: caffeinePreference ? `And ${numberOfShots} shots of espresso` : defaultValues.Caffeine
+      // Use the selected preference or fallback to default value if not selected
+    };
+
+    return Object.keys(preferences).map((preference, index) => (
+      <li key={index}>
+        {preferences[preference]}
+      </li>
+    ));
+  };
 
   return (
     <section>
@@ -72,7 +147,6 @@ function Results({selectedDrinks}) {
           <p className="text mt-4 ms-1">Here are your results:</p>
       </div>
 
-      {drinkResults.map((drink, index) => (
         <div key={index} className="d-flex align-items-center justify-content-center flex-wrap flex-column">
           <div className="d-flex mb-2">
             <div className="p-3">
@@ -83,22 +157,30 @@ function Results({selectedDrinks}) {
             </div>
             <div className="mt-4 me-4">
               <ul>
-                {drink.ingredients.split('\n').map((ingredient, index) => (
-                  <li key={index}>{ingredient}</li>
-                ))}
+              {constructIngredients()}
               </ul>
             </div>
           </div>
         </div>
-      ))}
+
     </section>
   );
 }
 
-function ResultsSection(props) {
+function ResultsSection({
+  temperaturePreference,
+  basePreference,
+  flavorPreference,
+  caffeinePreference
+}) {
   return (
     <section>
-      <Results selectedDrinks={[2, 4]}/>
+      <Results 
+        temperaturePreference={temperaturePreference}
+        basePreference={basePreference}
+        flavorPreference={flavorPreference}
+        caffeinePreference={caffeinePreference}
+      />
       <div>
         <div className="d-flex mt-5 ms-4 mb-1">
           <img className="headerlogo" src="img/HeaderLogo.png" alt="coffee"/>
@@ -132,6 +214,7 @@ export function Quiz() {
   ];
 
   const milkOptions = [
+    { imgSrc: "img/quizimgs/water.png", label: "Water" },
     { imgSrc: "img/quizimgs/oatmilk.jpg", label: "Oat" },
     { imgSrc: "img/quizimgs/2percentmilk.jpg", label: "2%" },
     { imgSrc: "img/quizimgs/wholemilk.jpg", label: "Whole" },
@@ -164,10 +247,42 @@ export function Quiz() {
         label: "Latte",
     }
   ];
-
+  
   const otherOptions = [
 
   ];
+
+  const [temperaturePreference, setTemperaturePreference] = useState('');
+  const [basePreference, setBasePreference] = useState('');
+  const [flavorPreference, setFlavorPreference] = useState('');
+  const [caffeinePreference, setCaffeinePreference] = useState('');
+
+  const handleTemperatureChange = (selectedPreference) => {
+    setTemperaturePreference(selectedPreference);
+    setShowResults(false);
+  };
+
+  const handleBaseChange = (selectedPreference) => {
+    setBasePreference(selectedPreference);
+    setShowResults(false);
+  };
+
+  const handleFlavorChange = (selectedPreference) => {
+    setFlavorPreference(selectedPreference);
+    setShowResults(false);
+  };
+
+  const handleCaffeineChange = (selectedPreference) => {
+    setCaffeinePreference(selectedPreference);
+    setShowResults(false);
+  };
+
+
+  const [showResults, setShowResults] = useState(false);
+
+  const handleShowResults = () => {
+    setShowResults(true);
+  };
 
   return (
     <div className="questionnairebody">
@@ -176,62 +291,55 @@ export function Quiz() {
           <IntroductionSection />
         </div>
         <section className="d-flex align-items-center justify-content-center flex-wrap flex-column m-5">
-          <div>
-            <PreferenceSection
-              title="Temperature Preference"
-              question="Would you like an iced or a hot drink?"
-              options={temperatureOptions}
-              name="temperature"
-            />
-          </div>
-          <div>
-            <PreferenceSection
-              title="Milk Preference"
-              question="What kind of milk do you prefer?"
-              options={milkOptions}
-              name="milk"
-            />
-          </div>
+          <PreferenceSection
+            title="Temperature Preference"
+            question="Would you like an iced or a hot drink?"
+            options={temperatureOptions}
+            name="temperature"
+            handlePreferenceChange={handleTemperatureChange}
+          />
+
+          <PreferenceSection
+            title="Base Preference"
+            question="What kind of base do you prefer?"
+            options={milkOptions}
+            name="milk"
+            handlePreferenceChange={handleBaseChange}
+          />
+
           <PreferenceSection
             title="Flavor Preference"
             question="What kind of syrup do you prefer?"
             options={flavorOptions}
             name="flavor"
+            handlePreferenceChange={handleFlavorChange}
           />
+
           <PreferenceSection
             title="Caffeine Preference"
             question="How much caffeine do you prefer?"
             options={caffeineOptions}
             name="caffeine"
+            handlePreferenceChange={handleCaffeineChange}
           />
         </section>
 
         <section className="d-flex align-items-center justify-content-center flex-wrap flex-column m-5">
-          <Link
-            to="resultSection"
-            smooth={true}
-            duration={500}
-            className="questionnaireredirect"
-          >
+          <button onClick={handleShowResults} className="questionnaireredirect">
             See Your Results!
-          </Link>
+          </button>
         </section>
 
-        {/* <PreferenceSection
-          title="Here is your result!"
-          options={resultOptions}
-          name='1-2 tsp. of steamed milk
-          1 shot of espresso'
-        />
-
-        <PreferenceSection
-          title="Not sure?"
-          options={otherOptions}
-          name='others'
-        /> */}
-        <div>
-          <ResultsSection />
-        </div>
+        {showResults && (
+          <div>
+            <ResultsSection  
+              temperaturePreference={temperaturePreference}
+              basePreference={basePreference}
+              flavorPreference={flavorPreference}
+              caffeinePreference={caffeinePreference}
+            />
+          </div>
+        )}
       </main>
     </div>
   );
