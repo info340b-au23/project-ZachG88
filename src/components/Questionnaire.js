@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import { Link } from "react-scroll";
 import { Link } from 'react-router-dom';
 import drinkTypes from '../data/drinkTypes.json';
 
@@ -7,17 +6,17 @@ import drinkTypes from '../data/drinkTypes.json';
 
 
 const IntroductionSection = () => (
-    <section className="container-sm mt-lg-5">
-        <div className="mb-2">
-            <div className="d-flex mb-1">
-                <img className="headerlogo" src="/img/HeaderLogo.png" alt="coffee" />
-                <p className="text mt-4 ms-1">Introduction</p>
-            </div>
-            <div className="text-black mx-1">
-                <p>Welcome to iCoffee: Your Personal Coffee Companion! Choose your preference on temperature, milk, sweetness, and caffeine amount here, and we will generate the perfect drink just for you!</p>
-            </div>
-        </div>
-    </section>
+  <section className="container-sm mt-lg-5">
+    <div className="mb-2">
+      <div className="d-flex mb-1">
+        <img className="headerlogo" src="/img/HeaderLogo.png" alt="coffee" />
+        <p className="text mt-4 ms-1">Introduction</p>
+      </div>
+      <div className="text-black mx-1">
+        <p>Welcome to iCoffee: Your Personal Coffee Companion! Choose your preference on temperature, milk, sweetness, and caffeine amount here, and we will generate the perfect drink just for you!</p>
+      </div>
+    </div>
+  </section>
 );
 
 const PreferenceOption = ({ name, id, imgSrc, label, description, handlePreferenceChange }) => {
@@ -50,7 +49,6 @@ const PreferenceOption = ({ name, id, imgSrc, label, description, handlePreferen
   );
 };
 
-// PreferenceSection Component
 const PreferenceSection = ({ title, question, options, name, handlePreferenceChange }) => (
   <div className="preference-section">
     <div className="title-question-container">
@@ -82,17 +80,17 @@ function Results({
   temperaturePreference,
   basePreference,
   flavorPreference,
-  caffeinePreference}
-  ) {
+  caffeinePreference }
+) {
   let drink;
   let index;
   const Latte = drinkTypes[2];
   const Americano = drinkTypes[6];
 
-  if(basePreference === "Water"){
+  if (basePreference === "Water") {
     drink = Americano;
     index = 6;
-  }else{
+  } else {
     drink = Latte;
     index = 2;
   }
@@ -103,7 +101,6 @@ function Results({
       Base: "8 oz of 2% milk",
       Flavor: "No flavor",
       Caffeine: "1 espresso shot"
-      // Add more default values for each preference
     };
 
     let numberOfShots = "";
@@ -121,16 +118,15 @@ function Results({
         numberOfShots = "3";
         break;
       default:
-        numberOfShots = "1"; // You can set a default value here if needed
+        numberOfShots = "1";
         break;
     }
 
     const preferences = {
       Temperature: temperaturePreference ? (`Served ${temperaturePreference.toLowerCase()}`) : defaultValues.Temperature,
-      Base: basePreference ? `With 8oz of ${basePreference.toLowerCase()} ${index === 6 ? "" : "milk" }` : defaultValues.Base,
+      Base: basePreference ? `With 8oz of ${basePreference.toLowerCase()} ${index === 6 ? "" : "milk"}` : defaultValues.Base,
       Flavor: flavorPreference ? `With 2 pumps of ${flavorPreference.toLowerCase()}` : defaultValues.Flavor,
       Caffeine: caffeinePreference ? `And ${numberOfShots} shots of espresso` : defaultValues.Caffeine
-      // Use the selected preference or fallback to default value if not selected
     };
 
     return Object.keys(preferences).map((preference, index) => (
@@ -143,25 +139,25 @@ function Results({
   return (
     <section>
       <div className="d-flex mt-lg-5 ms-4 mb-1">
-          <img className="headerlogo" src="img/HeaderLogo.png" alt="coffee"/>
-          <p className="text mt-4 ms-1">Here are your results:</p>
+        <img className="headerlogo" src="img/HeaderLogo.png" alt="coffee" />
+        <p className="text mt-4 ms-1">Here are your results:</p>
       </div>
 
-        <div key={index} className="d-flex align-items-center justify-content-center flex-wrap flex-column">
-          <div className="d-flex mb-2">
-            <div className="p-3">
-              <img className="img-results" src={drink.imgSrc} alt="coffee"/>
-                <div>
-                  <button className="result-buttons">{drink.name}</button>
-                </div>
-            </div>
-            <div className="mt-4 me-4">
-              <ul>
-              {constructIngredients()}
-              </ul>
+      <div key={index} className="d-flex align-items-center justify-content-center flex-wrap flex-column">
+        <div className="d-flex mb-2">
+          <div className="p-3">
+            <img className="img-results" src={drink.imgSrc} alt="coffee" />
+            <div>
+              <button className="result-buttons">{drink.name}</button>
             </div>
           </div>
+          <div className="mt-4 me-4">
+            <ul>
+              {constructIngredients()}
+            </ul>
+          </div>
         </div>
+      </div>
 
     </section>
   );
@@ -175,7 +171,7 @@ function ResultsSection({
 }) {
   return (
     <section>
-      <Results 
+      <Results
         temperaturePreference={temperaturePreference}
         basePreference={basePreference}
         flavorPreference={flavorPreference}
@@ -183,7 +179,7 @@ function ResultsSection({
       />
       <div>
         <div className="d-flex mt-5 ms-4 mb-1">
-          <img className="headerlogo" src="img/HeaderLogo.png" alt="coffee"/>
+          <img className="headerlogo" src="img/HeaderLogo.png" alt="coffee" />
           <p className="text mt-4 ms-1">Not Sure?</p>
         </div>
         <div className="d-flex align-items-center justify-content-center flex-wrap flex-column pb-5">
@@ -199,15 +195,13 @@ function ResultsSection({
           >
             Get a blind box!
           </Link>
-        </div>  
+        </div>
       </div>
     </section>
   );
 }
 
-// QuizPage Component
 export function Quiz() {
-  // Define the options for each preference section
   const temperatureOptions = [
     { imgSrc: "img/quizimgs/cold.jpg", label: "Cold" },
     { imgSrc: "img/quizimgs/hot.jpg", label: "Hot" },
@@ -239,15 +233,16 @@ export function Quiz() {
   ];
 
   const resultOptions = [
-    { 
-        imgSrc: "img/Macchiatto.png", 
-        label: "Macchiatto",    },
-    { 
-        imgSrc: "img/Latte.png", 
-        label: "Latte",
+    {
+      imgSrc: "img/Macchiatto.png",
+      label: "Macchiatto",
+    },
+    {
+      imgSrc: "img/Latte.png",
+      label: "Latte",
     }
   ];
-  
+
   const otherOptions = [
 
   ];
@@ -332,7 +327,7 @@ export function Quiz() {
 
         {showResults && (
           <div>
-            <ResultsSection  
+            <ResultsSection
               temperaturePreference={temperaturePreference}
               basePreference={basePreference}
               flavorPreference={flavorPreference}

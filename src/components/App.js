@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Routes, Route} from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { getDatabase, ref, push as firebasePush, onValue, remove } from 'firebase/database';
 import NavBar from './NavBar';
 import { HomePage } from './HomePage';
 import { Quiz } from './Questionnaire';
-import { Blindbox} from './BlindBox';
+import { Blindbox } from './BlindBox';
 import { Education } from './Education';
 import { Library } from './Library';
 import { ProfilePage } from './ProfilePage';
@@ -34,12 +34,12 @@ function App(props) {
     const deleteFavorite = (userId, method) => {
         const db = getDatabase();
         const userFavoritesRef = ref(db, `favorites/${userId}`);
-        
+
         onValue(userFavoritesRef, (snapshot) => {
             snapshot.forEach((favSnapshot) => {
                 const favorite = favSnapshot.val();
                 if (favorite.name === method.name) {
-                remove(favSnapshot.ref);
+                    remove(favSnapshot.ref);
                 }
             });
         });
@@ -53,11 +53,11 @@ function App(props) {
         <div>
             <NavBar userId={currentUser ? currentUser.uid : null} />
             <Routes>
-                <Route index element={<HomePage toggleQuiz={toggleQuiz}/>} />
+                <Route index element={<HomePage toggleQuiz={toggleQuiz} />} />
                 <Route path="quiz" element={<Quiz />} />
                 <Route path="blindbox" element={<Blindbox />} />
-                <Route path="library" element={<Library data={props.data}/>} />
-                <Route path="education"element={<Education userId={currentUser ? currentUser.uid : null} currentUser={currentUser} saveFavorite={saveFavorite}/>}/>
+                <Route path="library" element={<Library data={props.data} />} />
+                <Route path="education" element={<Education userId={currentUser ? currentUser.uid : null} currentUser={currentUser} saveFavorite={saveFavorite} />} />
                 <Route path="/profile/:userId" element={<ProfilePage userId={currentUser ? currentUser.uid : null} deleteFavorite={deleteFavorite} />} />
                 <Route path="*" element={<ErrorPage />} />
             </Routes>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
-function NavBar({userId}) {
+function NavBar({ userId }) {
     const [expanded, setExpanded] = useState(false);
 
     const handleClick = () => {
