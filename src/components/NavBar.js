@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
-function NavBar() {
+function NavBar({userId}) {
     const [expanded, setExpanded] = useState(false);
 
     const handleClick = () => {
@@ -14,7 +14,7 @@ function NavBar() {
         <Navbar expand="sm">
             <Navbar.Brand as={Link} to="/">
                 <img
-                    src="img/icoffee_logo.jpeg"
+                    src="/img/icoffee_logo.jpeg"
                     height="80"
                     alt="iCoffee Logo"
                     loading="lazy"
@@ -29,7 +29,7 @@ function NavBar() {
                     <Nav.Link className="text-center ms-3" as={Link} to="/quiz" onClick={handleClick}>Quiz</Nav.Link>
                     <Nav.Link className="text-center ms-3" as={Link} to="/education" onClick={handleClick}>Education</Nav.Link>
                     <Nav.Link className="text-center ms-3" as={Link} to="/library" onClick={handleClick}>Library</Nav.Link>
-                    <Nav.Link className="text-center ms-3" as={Link} to="/profile" onClick={handleClick}>Profile</Nav.Link>
+                    <Nav.Link className="text-center ms-3" as={Link} to={`/profile/${userId}`} onClick={handleClick}>Profile</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

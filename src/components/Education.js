@@ -53,7 +53,7 @@ function RoastTypes({imgSrc, type, description}) {
     );
 }
 
-function CoffeeBrewingMethods({ currentUser, saveFavorite }) {
+function CoffeeBrewingMethods({currentUser, saveFavorite, userId}) {
     const [preferredStrength, setPreferredStrength] = useState('light');
     const [preferredType, setPreferredType] = useState('drip');
     const [recommendedMethods, setRecommendedMethods] = useState([]);
@@ -81,7 +81,7 @@ function CoffeeBrewingMethods({ currentUser, saveFavorite }) {
                 <p className="h1 custom-bg text-center m-0">Different Brewing Methods</p>
                 <p className="text-center m-3">Select different options for strength and the brewing type to get recommendations!</p>
                 <p className="text-center">
-                    <Link to="/profile">Sign in</Link> to save recommendations to your profile!
+                    <Link to={`/profile/${userId}`}>Sign in</Link> to save recommendations to your profile!
                 </p>
             </div>
             

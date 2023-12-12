@@ -25,27 +25,17 @@ export function PageRibbon(props) {
     )
 }
 
-export function QuizCard(props) {
-    const {onClick} = props;
-
-    function handleClick(event) {
-        event.preventDefault();
-        onClick();
-    }
-
+function QuizCard(props) {
     return(
-        <section className="container d-flex justify-content-center mb-5rem">
+        <section className="container d-flex justify-content-center">
             <div className="card card-bg custom-border" style={{width: 350}}>
                 <div className="card-body">
-                    <h5 className="card-title">Find the Right Cup of Coffee For You!</h5>
-                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    {/* <a href="questionnaire.html" className="btn nav-color" onClick={handleClick}>Take the quiz!</a> */}
-                    <Link className="nav-link btn nav-color" to="/quiz">Take the quiz!</Link>
+                    <h5 className="card-title text-center">Find the Right Cup of Coffee For You!</h5>
+                    <Link className="mt-3 nav-link btn nav-color" to="/quiz">Take the quiz!</Link>
                 </div>
             </div>
         </section>
     )
-
 }
 
 function AboutUs(props) {
